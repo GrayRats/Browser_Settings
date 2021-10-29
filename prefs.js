@@ -594,13 +594,31 @@ user_pref("findbar.highlightAll", true);
 user_pref("font.internaluseonly.changed", true);
 user_pref("font.minimum-size.x-western", 10);
 user_pref("font.name.monospace.x-western", "Cascadia Mono");
-user_pref(" ", "Cascadia Mono");
 user_pref("font.name.sans-serif.x-cyrillic", "PT Astra Sans");
 user_pref("font.name.sans.x-cyrillic", "PT Astra Sans");
 user_pref("font.name.monospace.x-cyrillic", "Verdana");
-user_pref(" ", " ");
-user_pref("font.name.sans-serif.x-western", "PT Astra Sans");
-user_pref("font.name.serif.x-western", "PT Astra Sans");
+user_pref("font.default.el"                     , "sans-serif");
+user_pref("font.default.x-baltic"               , "sans-serif");
+user_pref("font.default.x-central-euro"         , "sans-serif");
+user_pref("font.default.x-cyrillic"             , "sans-serif");
+user_pref("font.default.x-unicode"              , "sans-serif");
+user_pref("font.default.x-user-def"             , "sans-serif");
+user_pref("font.default.x-western"              , "sans-serif");
+user_pref("font.name.monospace.el"              , "PT Mono");
+user_pref("font.name.monospace.x-baltic"        , "PT Mono");
+user_pref("font.name.monospace.x-central-euro"  , "PT Mono");
+user_pref("font.name.monospace.x-unicode"       , "PT Mono");
+user_pref("font.name.monospace.x-user-def"      , "PT Mono");
+user_pref("font.name.sans-serif.el"             , "Liberation Sans");
+user_pref("font.name.sans-serif.x-central-euro" , "PT Sans");
+user_pref("font.name.sans-serif.x-unicode"      , "DejaVu Sans");
+user_pref("font.name.sans-serif.x-user-def"     , "PT Sans");
+user_pref("font.name.sans-serif.x-western"      , "PT Sans");
+user_pref("font.name.serif.el"                  , "Liberation Serif");
+user_pref("font.name.serif.x-central-euro"      , "PT Serif");
+user_pref("font.name.serif.x-unicode"           , "DejaVu Serif");
+user_pref("font.name.serif.x-user-def"          , "PT Serif");
+user_pref("font.name.serif.x-western"           , "PT Serif");
 //
 //
 //
