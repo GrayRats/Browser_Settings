@@ -46,10 +46,6 @@ user_pref("browser.startup.homepage_override.mstone", "ignore");
 // Disable stat collection
 user_pref("media.video_stats.enabled", false);
 user_pref("media.autoplay.blocking_policy", 2);
-
-// 1.15 Показывать URL адрес полностью, включая HTTPS:// 
-user_pref("browser.urlbar.trimURLs", false);
-
 // 1.15 выкл URL адрес полностью, включая HTTPS:// 
 user_pref("browser.urlbar.trimURLs", true);
 // 1.16 Поисковые подсказки
@@ -64,8 +60,14 @@ user_pref("browser.search.suggest.enabled", true);
 user_pref("layout.spellcheckDefault", 2);
 // 1.18 При выделении слова не захватывать следующий пробел
 user_pref("layout.word_select.eat_space_to_next_word", false);
-
-
+user_pref("dom.disable_beforeunload", true);
+user_pref("browser.urlbar.openintab", true);
+user_pref("browser.urlbar.quicksuggest.sponsoredIndex", 0);
+user_pref("browser.urlbar.ctrlCanonizesURLs", false);
+user_pref("browser.urlbar.experimental.firefoxSuggestLabels.enabled", true);
+user_pref("browser.urlbar.quicksuggest.enabled", false);
+user_pref("browser.urlbar.eventTelemetry.enabled", false);
+ 
 // 1.23 Обновленный режим печати
 user_pref("print.tab_modal.enabled", true);
 
@@ -178,7 +180,7 @@ user_pref("browser.urlbar.maxRichResults", 10);
 user_pref("browser.zoom.siteSpecific", true);
 user_pref("nglayout.enable_drag_images", true);
 user_pref("browser.tabs.tabClipWidth", 40);
-
+ 
 
 // 1.53 Включить интеграцию с центром уведомлений Windows 10
 user_pref("alerts.useSystemBackend", true);
@@ -213,6 +215,15 @@ user_pref("gfx.offscreencanvas.enabled", true);
 // 2.6 Рендер PDF средствами видеокарты
 user_pref("pdfjs.enableWebGL", true);
 user_pref("javascript.options.warp", true);
+///
+user_pref( "layout.frame_rate.precise", true);
+user_pref( "layers.acceleration.force-enabled", true);
+user_pref( "layers.offmainthreadcomposition.enabled", true);
+user_pref( "layers.async-video.enabled", true);
+user_pref( "layers.offmainthreadcomposition.async-animations", true);
+user_pref( "gfx.webrender.all", true);
+
+
 
 // Принудительное декодирование видео видеокартой
 // user_pref("media.hardware-video-decoding.force-enabled", true);
@@ -243,8 +254,7 @@ user_pref("network.http.rcwn.enabled", false);
 
 // 4.11 Включить кэш в оперативной памяти
 user_pref("browser.cache.memory.enable", true);
-
-
+///
 /////////////////////////////////////////////////////////////
 // 5. Настройки DNS /////////////////////////////////////////
 /////////////////////////////////////////////////////////////
@@ -357,6 +367,8 @@ user_pref("security.ssl.require_safe_negotiation", true);
 
 // 7.2 Запрет на использование устаревших и уязвимых TLS 1.0 и 1.1
 user_pref("security.tls.version.enable-deprecated", false);
+user_pref("security.tls.version.max", 4;
+user_pref("security.tls.version.min", 3);
 
 // 7.3 OCSP (Online Certificate Status Protocol) для подтверждения, что SSL сертификат сайта действителен и безопасен
 user_pref("security.ssl.enable_ocsp_stapling", true);
@@ -377,6 +389,8 @@ user_pref("security.OCSP.enabled", 1);
 // 3=Разрешены только локальные сертификаты, например, установленные антивирусами
 // 4=Разрешены локальные + подписанные в 2015 году или ранее
 user_pref("security.pki.sha1_enforcement_level", 1);
+user_pref("security.tls.enable_delegated_credentials", true);
+
 
 // 7.9 Использовать CRLite для более быстрой проверки надежности удостоверяющих центров
 // https://blog.mozilla.org/security/2020/01/09/crlite-part-2-end-to-end-design/
@@ -385,9 +399,42 @@ user_pref("security.pki.crlite_mode", 2);
 
 // 7.10 Заблокировать выполнение скриптов, загружающихся по открытому соединению, на https страницах
 user_pref("security.mixed_content.block_active_content", true); 
-
+user_pref("privacy.trackingprotection.fingerprinting.enabled", true);
+user_pref("privacy.trackingprotection.cryptomining.enable", true);
+user_pref("privacy.trackingprotection.socialtracking.enabled", true);
+user_pref("privacy.socialtracking.block_cookies.enabled", true);
+user_pref("privacy.donottrackheader.enabled", true);
+user_pref("toolkit.telemetry.enabled", false);
+user_pref("toolkit.telemetry.unified", false);
+user_pref("toolkit.telemetry.archive.enabled", false);
+user_pref("toolkit.telemetry.shutdownPingSender.enabled", false);
+user_pref("toolkit.telemetry.firstShutdownPing.enabled", false);
+user_pref("toolkit.telemetry.debugSlowSql ", false);
+user_pref("browser.ping-centre.telemetry", false);
+user_pref("browser.send_pings", false);
+user_pref("browser.send_pings.require_same_host", true);
+user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
+user_pref("dom.event.clipboardevents.enabled", false);
+user_pref("privacy.userContext.ui.enabled", true);
+user_pref("browser.privatebrowsing.forceMediaMemoryCache", true);
+user_pref("pdfjs.enableScripting", false);
+user_pref("dom.battery.enabled", false);
+user_pref(" ", false);
+user_pref(" ", false);
+user_pref(" ", false);
+user_pref("privacy.trackingprotection.enabled", false);
+user_pref("privacy.resistFingerprinting", true);
+user_pref("privacy.spoof_english", 2);
 // 7.11 Запретить Flash плагину на https страницах обращаться к не зашифрованным ресурсам
 user_pref("security.mixed_content.block_object_subrequest", true);
+//
+user_pref("network.cookie.cookieBehavior", 4);
+//  0 = принимать все файлы Cookie по умолчанию.
+//  1 = принимать файлы Cookie только от определенного сайта (блокировать сторонние файлы Cookie)
+//  2 = блокировать все файлы Cookie по умолчанию
+//  3 = блокировать файлы Cookie от ранее не знакомых сайтов
+//  4 = новая политика хранения файлов Cookie (предотвращение доступа к хранилищу для трекеров)
+
 
 // 7.12 Блокировка небезопасных алгоритмов шифрования, уязвимых для хакерских атак
 // 7.12.1 Отключение 3DES с размером ключа < 128 и отсутствием поддержки Perfect forward secrecy (PFS)
@@ -395,7 +442,7 @@ user_pref("security.mixed_content.block_object_subrequest", true);
 // но для максимальной безопасности я рекомендую его отключить (установить значение false)
 user_pref("security.ssl3.rsa_des_ede3_sha", true);
 
-
+user_pref(" ", false);
 // 7.12.2 Отключение некоторых устаревших алгоритмов
 user_pref("security.ssl3.ecdhe_ecdsa_aes_256_sha", false);
 user_pref("security.ssl3.ecdhe_ecdsa_aes_128_sha", false);
@@ -466,3 +513,41 @@ user_pref("javascript.options.spectre.object_mitigations.barriers", false);
 user_pref("javascript.options.spectre.object_mitigations.misc", false);
 user_pref("javascript.options.spectre.string_mitigations", false);
 user_pref("javascript.options.spectre.value_masking", false);
+
+
+/////
+user_pref("browser.safebrowsing.enabled", false);
+user_pref("browser.safebrowsing.downloads.enabled", false);
+user_pref("browser.safebrowsing.provider.google4.dataSharing.enabled", blank);
+user_pref("browser.safebrowsing.provider.google4.updateURL", blank);
+user_pref("browser.safebrowsing.provider.google4.reportURL", blank);
+user_pref("browser.safebrowsing.provider.google4.reportPhishMistakeURL", blank);
+user_pref("browser.safebrowsing.provider.google4.reportMalwareMistakeURL", blank);
+user_pref("browser.safebrowsing.provider.google4.lists", blank);
+user_pref("browser.safebrowsing.provider.google4.gethashURL", blank);
+//
+user_pref("browser.safebrowsing.provider.google4.dataSharing.enabled", false);
+user_pref("browser.safebrowsing.provider.google4.dataSharingURL", blank);
+user_pref("browser.safebrowsing.provider.google4.advisoryURL", blank);
+user_pref("browser.safebrowsing.provider.google4.advisoryName ", blank);
+user_pref("browser.safebrowsing.provider.google.updateURL", blank);
+user_pref("browser.safebrowsing.provider.google.reportURL", blank);
+user_pref("browser.safebrowsing.provider.google.reportPhishMistakeURL", blank);
+user_pref("browser.safebrowsing.provider.google.pver", blank);
+user_pref("browser.safebrowsing.provider.google.lists", blank);
+user_pref( "browser.safebrowsing.provider.google.gethashURL", blank);
+user_pref( "browser.safebrowsing.provider.google.advisoryURL ", blank);
+user_pref( "browser.safebrowsing.downloads.remote.url", blank);
+user_pref( "safebrowsing.malware.enabled", false);
+user_pref( "safebrowsing.phishing.enabled", true);
+// Отсоединить вкладку, перетащив ее из окна 
+user_pref( "browser.tabs.allowTabDetach", true);
+// главный переключатель нового дизайна. 
+user_pref("browser.proton.doorhangers.enabled", true);
+user_pref("browser.proton.infobars.enabled", true);
+user_pref("browser.proton.places-tooltip.enabled", true);
+user_pref("browser.proton.urlbar.enabled", true);
+user_pref("browser.startup.blankWindow", false);
+user_pref("browser.startup.preXulSkeletonUI", true);
+/// Функция позволяет выбрать высоту вкладок и адресной строки
+user_pref("browser.uidensity", 1);
