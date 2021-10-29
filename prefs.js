@@ -68,6 +68,14 @@ user_pref("browser.urlbar.experimental.firefoxSuggestLabels.enabled", true);
 user_pref("browser.urlbar.quicksuggest.enabled", false);
 user_pref("browser.urlbar.eventTelemetry.enabled", false);
  
+///
+user_pref("datareporting.healthreport.uploadEnabled", false);
+user_pref("datareporting.policy.dataSubmissionEnabled", false);
+user_pref("datareporting.policy.firstRunURL", "");
+// для мобильной версии, но иногда в ноутбуках тоже есть какие-то сенсорЫ
+user_pref("device.sensors.enabled", false);
+user_pref("device.sensors.motion.enabled", false);
+user_pref("device.sensors.orientation.enabled", false);
 // 1.23 Обновленный режим печати
 user_pref("print.tab_modal.enabled", true);
 
@@ -101,7 +109,7 @@ user_pref("lightweightThemes.recommendedThemes", "");
 // 1.32 Ленивая загрузка ранее открытых вкладок после перезапуска браузера
 // true - загружается только активная вкладка, остальные вкладки загружаются по мере их открытия пользователем
 // false - все вкладки загружаются одновременно после запуска браузера
-user_pref("browser.sessionstore.restore_on_demand", false);
+user_pref("browser.sessionstore.restore_on_demand", true);
 
 // 1.33 Возможность пожаловаться на расширение при его удалении
 user_pref("extensions.abuseReport.enabled", false);
@@ -174,12 +182,12 @@ user_pref("browser.compactmode.show", true);
 //======
 // 1.48 Количество строк подсказок в адресной строке
 // Значение -1 полностью отключает подсказки
-user_pref("browser.urlbar.maxRichResults", 10);
+user_pref("browser.urlbar.maxRichResults", 15);
 // 1.52 Хранение настроек масштабирования веб-страниц
 // Значения true - для каждого сайта свой масштаб false - для всех сайтов одинаковый масштаб
 user_pref("browser.zoom.siteSpecific", true);
 user_pref("nglayout.enable_drag_images", true);
-user_pref("browser.tabs.tabClipWidth", 40);
+user_pref("browser.tabs.tabClipWidth", 20);
  
 
 // 1.53 Включить интеграцию с центром уведомлений Windows 10
@@ -192,7 +200,7 @@ user_pref("browser.newtabpage.activity-stream.section.highlights.rows", 6);
 user_pref("browser.newtabpage.activity-stream.topSitesRows", 5);
 user_pref("browser.newtabpage.activity-stream.section.topstories.rows", 0);
 
-//==-=-==-
+//==-=-==-=
 
 // 1.64.1 Позволяет использовать пользовательские таблицы стилей в папке chrome в папке профиля пользователя
 // Рекомендую данный твик интерфейса https://github.com/black7375/Firefox-UI-Fix
@@ -369,7 +377,13 @@ user_pref("security.ssl.require_safe_negotiation", true);
 user_pref("security.tls.version.enable-deprecated", false);
 user_pref("security.tls.version.max", 4;
 user_pref("security.tls.version.min", 3);
-
+user_pref("tcp.tcp_fastopen_enable", true);
+user_pref("network.ftp.enabled", true);
+user_pref(" ", 3);
+user_pref(" ", 3);
+user_pref(" ", 3);
+user_pref(" ", 3);
+user_pref(" ", 3);
 // 7.3 OCSP (Online Certificate Status Protocol) для подтверждения, что SSL сертификат сайта действителен и безопасен
 user_pref("security.ssl.enable_ocsp_stapling", true);
 
@@ -423,7 +437,9 @@ user_pref(" ", false);
 user_pref(" ", false);
 user_pref(" ", false);
 user_pref("privacy.trackingprotection.enabled", false);
+// Отключает запоминание уровня зума для сайта 
 user_pref("privacy.resistFingerprinting", true);
+user_pref("privacy.resistFingerprinting.autoDeclineNoUserInputCanvasPrompts", false);
 user_pref("privacy.spoof_english", 2);
 // 7.11 Запретить Flash плагину на https страницах обращаться к не зашифрованным ресурсам
 user_pref("security.mixed_content.block_object_subrequest", true);
@@ -549,5 +565,66 @@ user_pref("browser.proton.places-tooltip.enabled", true);
 user_pref("browser.proton.urlbar.enabled", true);
 user_pref("browser.startup.blankWindow", false);
 user_pref("browser.startup.preXulSkeletonUI", true);
+// удобный режим чтения страницы, при котором все, кроме текста удаляется.
+user_pref("reader.color_scheme", "dark");
+user_pref("reader.content_width", 12);
+//////==
+user_pref("browser.link.open_newwindow", "3"); // Открытие ссылок из внешних окон 
+user_pref("browser.link.open_newwindow.override.external", "3"); // Открытие приложнение из внешних окон 
+/////===
 /// Функция позволяет выбрать высоту вкладок и адресной строки
+///predictor.enabled"disablePrefetch отвечают за предварительное посещение ссылок
+///fastopen_enable" включает TCP Fast Open
 user_pref("browser.uidensity", 1);
+user_pref("network.allow-experiments", false);
+user_pref("network.cookie.prefsMigrated", true);
+user_pref("network.predictor.enabled", false);
+user_pref("network.warnOnAboutNetworking", false)
+// увидеть ваши закладки с мобильной версии, если у вас подключена синхронизация.
+user_pref("browser.bookmarks.showMobileBookmarks", true);
+// При переключении вкладок отображаются превью страниц
+user_pref("browser.ctrlTab.previews", true);
+//
+user_pref("config.trim_on_minimize", "false");
+///////////
+//
+//
+//
+user_pref("findbar.highlightAll", true);
+user_pref("font.internaluseonly.changed", true);
+user_pref("font.minimum-size.x-western", 10);
+user_pref("font.name.monospace.x-western", "Cascadia Mono");
+user_pref(" ", "Cascadia Mono");
+user_pref("font.name.sans-serif.x-cyrillic", "PT Astra Sans");
+user_pref("font.name.sans.x-cyrillic", "PT Astra Sans");
+user_pref("font.name.monospace.x-cyrillic", "Verdana");
+user_pref(" ", " ");
+user_pref("font.name.sans-serif.x-western", "PT Astra Sans");
+user_pref("font.name.serif.x-western", "PT Astra Sans");
+//
+//
+//
+user_pref("gfx.text.disable-aa", "true"); // отключает сглаживание firefox
+user_pref("gfx.font_rendering.cleartype_params.rendering_mode", "5");
+user_pref("gfx.font_rendering.cleartype_params.cleartype_level", "100");
+user_pref("gfx.font_rendering.cleartype_params.enhanced_contrast", "1000");
+user_pref("gfx.font_rendering.cleartype_params.gamma ", "2200");
+user_pref("gfx.use_text_smoothing_setting", true);
+user_pref("gfx.canvas.azure.backends", "direct2d1.1,skia,cairo");
+//
+//////
+user_pref("media.autoplay.enabled", false);
+user_pref("media.av1.enabled", true);
+// GTK
+user_pref("widget.chrome.allow-gtk-dark-theme", true);
+user_pref("widget.content.allow-gtk-dark-theme", true);
+// user_pref("widget.content.gtk-theme-override", "Adwaita:light");
+user_pref("browser.download.autohideButton", false);
+user_pref("browser.download.panel.shown", true);
+//
+//
+user_pref("dom.ipc.processCount", "8"); /// Измените количество процессов контента ВКЛАДОК 8
+//
+/// изменить окно просмотра 
+user_pref("gfx.webrender.picture-tile-height", "254");
+user_pref("gfx.webrender.picture-tile-width", " 510");
