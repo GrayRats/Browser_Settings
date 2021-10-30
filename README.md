@@ -78,8 +78,7 @@ about: config > dom.storage.enabled > отключить = false<br>
 **extensions.json** - список аддонов, который также определяет какие из них включены/выключены. <br>
 Также здесь хранятся ID аддонов и прочая информация об установленных аддонах.<br>
 
-Почти всё о папке профиля, её файлах, папках и т.д.: <br>
-http://kb.mozillazine.org/Profile_folder_-_Firefox
+[Почти всё о папке профиля, её файлах, папках](http://kb.mozillazine.org/Profile_folder_-_Firefox) и т.д.: <br>
 
 [Вверх](#_)
 ___
