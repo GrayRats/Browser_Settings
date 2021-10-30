@@ -23,7 +23,7 @@ Browser_Settings
 можно через ветку реестра: `HKEY_CURRENT_USER\Software\Mozilla\Firefox\Extensions` <br>
 ___
 ⭐**Firefox Screenshots** <br>
-[screenshots@mozilla.org.xpi](https://support.mozilla.org/ru/kb/skrinshoty-firefox)) <br>
+[screenshots@mozilla.org.xpi](https://support.mozilla.org/ru/kb/skrinshoty-firefox) <br>
 Скриншоты Firefox это новая функция, позволяющая делать, скачивать, собирать и передавать скриншоты.  <br>
 Чтобы использовать её, щёлкните по меню Действия страницы в адресной строке и выберите screenshots menu icon  <br>
 Сделать скриншот в выпадающем меню. <br>
@@ -32,13 +32,13 @@ extensions.screenshots.system-disabled = true <br>
 extensions.screenshots.disabled = true <br>
 ___
 ⭐**Pocket** <br>
-[firefox@getpocket.com.xpi](https://support.mozilla.org/ru/kb/sohranit-veb-stranicy-dlya-posleduyushego-prosmotr)) <br>
+[firefox@getpocket.com.xpi](https://support.mozilla.org/ru/kb/sohranit-veb-stranicy-dlya-posleduyushego-prosmotr) <br>
 Кнопка Pocket позволяет сохранять веб-страницы и видео в Pocket всего одним щелчком мыши. Pocket удаляет всё ненужное и сохраняет страницу в чистом, строгом виде и позволяет получить доступ к ней через приложение Pocket. Всё, что вам нужно, это бесплатный аккаунт, соединение с интернетом и кнопка Pocket в адресной строке. <br>
 ✅ Выключить: <br>
 extensions.pocket.enabled = false <br>
 ___
 ⭐ Web Compat** <br>
-[webcompat@mozilla.org.xpi](https://superuser.com/questions/1117062/what-is-the-web-compat-firefox-addon-avast-suggest-removing)) <br>
+[webcompat@mozilla.org.xpi](https://superuser.com/questions/1117062/what-is-the-web-compat-firefox-addon-avast-suggest-removing) <br>
 Urgent post-release fixes for web compatibility <br>
 Срочные пост-релизные исправления для совместимости в Интернете. <br>
 Команда WebCompat в Mozilla гарантирует, что веб-сайт корректно работает в Firefox, в большинстве случаев.
@@ -50,7 +50,7 @@ Urgent post-release fixes for web compatibility <br>
 // SpeedyFox - https://crystalidea.com/speedyfox
 // Оптимизирует, путём сжатия баз данных, профиль для ускорения запуска и повышения производительности
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-([Интерфейс PROTON-fix](https://github.com/black7375/Firefox-UI-Fix)) 
+([Интерфейс PROTON-fix](https://github.com/black7375/Firefox-UI-Fix)
  
 Hide default Context Menu items in Firefox Proton (89+) release versions ([SimpleMenuWizard](https://github.com/stonecrusher/simpleMenuWizard)) 
 ___
