@@ -2,7 +2,9 @@ Browser_Settings
 
 ## Блокировки Рекламы
 Для Блокировки Рекламы Используйте <br>
-[UBlock→](https://addons.mozilla.org/ru/firefox/addon/ublock-origin/) <br>
+[uBlock Origin ⭐](https://addons.mozilla.org/ru/firefox/addon/ublock-origin/) <br>
+import Actually Legitimate URL Shortener Tool[Actually Legitimate URL Shortener Tool](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt)|[uGitHub](https://github.com/DandelionSprout/adfilt/blob/master/LegitimateURLShortener.txt) <br>
+maybe, enable AdGuard URL Tracking.
 // В разделе Приватность рекомендуется активировать все фильтры   
 // Для блокировки рекламы на Youtube активируйте фильтр uBlock filters – Annoyances and SponsorBlock для YouTube
 // Для блокировки Yandex Direct достаточно добавить фильтр ->
@@ -16,12 +18,30 @@ Browser_Settings
 ## Доп.Расширения для защиты вашей приватности
 ⭐[LocalCDN](https://addons.mozilla.org/ru/firefox/addon/localcdn-fork-of-decentraleyes/) безопасный-js <br>
 ⭐[ClearURLs](https://addons.mozilla.org/ru/firefox/addon/clearurls/) - Для блокировки url-рекламы используйте. <br>
+
+[Smart Referer](https://addons.mozilla.org/firefox/addon/smart-referer/) ✔ [Privacy](https://addons.mozilla.org/firefox/addon/smart-referer/privacy/) | [GitLab ](https://gitlab.com/smart-referer/smart-referer)| [GitHub Archive](https://github.com/meh/smart-referer)
+<br>
+
+[Skip Redirect](https://addons.mozilla.org/firefox/addon/skip-redirect/)  | [GitHub](https://github.com/sblask/webextension-skip-redirect) <br>
+
 Где размещены эти *.xpi файлы? <br>
 Ваш путь установки Mozilla Firefox\browser\features <br>
 Аддоны можно удалить оттуда "физически", <br>
 можно выключить через Ccleaner: Tools > Browser Plugins > Firefox <br>
 можно выключить через about:config (список будет дополнятся) <br>
 можно через ветку реестра: `HKEY_CURRENT_USER\Software\Mozilla\Firefox\Extensions` <br>
+Extensions (in no particular order...)
+___
+uBlock Origin ✔ Privacy | GitHub
+import Actually Legitimate URL Shortener Tool | GitHub
+___
+Extensions (maybe)
+*
+CanvasBlocker ✔ Privacy | GitHub
+Canvas API:  great fallback if you allow an RFP canvas site exception
+Screen API and Navigator API: don't use with RFP
+The rest: good protection against naive scripts, detectable with advanced scripts <br> 
+
 ___
 ⭐**Firefox Screenshots** <br>
 [screenshots@mozilla.org.xpi](https://support.mozilla.org/ru/kb/skrinshoty-firefox) <br>
