@@ -1,7 +1,8 @@
 Browser_Settings
 
-## Для Блокировки Рекламы Используйте 
-[UBlock→](https://addons.mozilla.org/ru/firefox/addon/ublock-origin/)
+## Блокировки Рекламы
+Для Блокировки Рекламы Используйте <br>
+[UBlock→](https://addons.mozilla.org/ru/firefox/addon/ublock-origin/) <br>
 // В разделе Приватность рекомендуется активировать все фильтры   
 // Для блокировки рекламы на Youtube активируйте фильтр uBlock filters – Annoyances and SponsorBlock для YouTube
 // Для блокировки Yandex Direct достаточно добавить фильтр ->
@@ -13,8 +14,8 @@ Browser_Settings
 [Cookie Quick Manager](https://addons.mozilla.org/firefox/addon/cookie-quick-manager/) - менеджер, также возвращает возможность просмотра детального списка печенек.<br>
 [Cookie Manager](https://addons.mozilla.org/en-US/firefox/addon/a-cookie-manager/) - ещё один менеджер. Просмотр, редактирование, удаление и поиск печенек.<br>
 ## Доп.Расширения для защиты вашей приватности
-⭐[LocalCDN](https://addons.mozilla.org/ru/firefox/addon/localcdn-fork-of-decentraleyes/) безопасный-js
-⭐[ClearURLs](https://addons.mozilla.org/ru/firefox/addon/clearurls/) - Для блокировки url-рекламы используйте.
+⭐[LocalCDN](https://addons.mozilla.org/ru/firefox/addon/localcdn-fork-of-decentraleyes/) безопасный-js <br>
+⭐[ClearURLs](https://addons.mozilla.org/ru/firefox/addon/clearurls/) - Для блокировки url-рекламы используйте. <br>
 Где размещены эти *.xpi файлы? <br>
 Ваш путь установки Mozilla Firefox\browser\features <br>
 Аддоны можно удалить оттуда "физически", <br>
@@ -52,7 +53,7 @@ Urgent post-release fixes for web compatibility <br>
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ([Интерфейс PROTON-fix](https://github.com/black7375/Firefox-UI-Fix)
  
-Hide default Context Menu items in Firefox Proton (89+) release versions ([SimpleMenuWizard](https://github.com/stonecrusher/simpleMenuWizard)) 
+Hide default Context Menu items in Firefox Proton (89+) release versions ([SimpleMenuWizard](https://github.com/stonecrusher/simpleMenuWizard)) <br>
 ___
 
 ## Как быстро найти нужную вкладку когда их слишком много
