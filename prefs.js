@@ -622,11 +622,11 @@ user_pref("font.name.serif.x-western"           , "PT Serif");
 //
 //
 //
-user_pref("gfx.text.disable-aa", "true"); // отключает сглаживание firefox
+user_pref("gfx.text.disable-aa", "false"); // отключает сглаживание firefox
 user_pref("gfx.font_rendering.cleartype_params.rendering_mode", "5");
 user_pref("gfx.font_rendering.cleartype_params.cleartype_level", "100");
 user_pref("gfx.font_rendering.cleartype_params.enhanced_contrast", "1000");
-user_pref("gfx.font_rendering.cleartype_params.gamma ", "2200");
+user_pref("gfx.font_rendering.cleartype_params.gamma", "2200");
 user_pref("gfx.use_text_smoothing_setting", true);
 user_pref("gfx.canvas.azure.backends", "direct2d1.1,skia,cairo");
 //
