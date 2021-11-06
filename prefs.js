@@ -60,7 +60,7 @@ user_pref("browser.search.suggest.enabled", true);
 user_pref("layout.spellcheckDefault", 2);
 // 1.18 При выделении слова не захватывать следующий пробел
 user_pref("layout.word_select.eat_space_to_next_word", false);
-user_pref("dom.disable_beforeunload", true);
+user_pref("dom.disable_beforeunload", false);
 user_pref("browser.urlbar.openintab", true);
 user_pref("browser.urlbar.quicksuggest.sponsoredIndex", 0);
 user_pref("browser.urlbar.ctrlCanonizesURLs", false);
@@ -646,3 +646,23 @@ user_pref("dom.ipc.processCount", "8"); /// Измените количеств�
 /// изменить окно просмотра 
 user_pref("gfx.webrender.picture-tile-height", "254");
 user_pref("gfx.webrender.picture-tile-width", " 510");
+
+
+
+////////////////
+user_pref("security.csp.enable", true); // [DEFAULT: true]
+/* 6004: enforce a security delay on some confirmation dialogs such as install, open/save
+/* [1] https://www.squarefree.com/2004/07/01/race-conditions-in-security-dialogs/ 
+/***/
+user_pref("security.dialog_enable_delay", 1000); // [DEFAULT: 1000]
+user_pref("privacy.sanitize.timeSpan", 0);
+user_pref("dom.storage.next_gen", true); // [DEFAULT: true FF92+]
+user_pref("accessibility.force_disabled", 1);
+user_pref("beacon.enabled", false); /* https://developer.mozilla.org/docs/Web/API/Navigator/sendBeacon ***/
+user_pref("breakpad.reportURL", "");
+user_pref("browser.tabs.crashReporting.sendReport", false); // [FF44+]
+user_pref("dom.push.enabled", false);
+user_pref("app.normandy.enabled", false);
+user_pref("app.normandy.api_url", "");
+user_pref("dom.serviceWorkers.enabled", true);
+
