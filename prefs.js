@@ -379,11 +379,6 @@ user_pref("security.tls.version.max", 4;
 user_pref("security.tls.version.min", 3);
 user_pref("tcp.tcp_fastopen_enable", true);
 user_pref("network.ftp.enabled", true);
-user_pref(" ", 3);
-user_pref(" ", 3);
-user_pref(" ", 3);
-user_pref(" ", 3);
-user_pref(" ", 3);
 // 7.3 OCSP (Online Certificate Status Protocol) для подтверждения, что SSL сертификат сайта действителен и безопасен
 user_pref("security.ssl.enable_ocsp_stapling", true);
 
@@ -433,9 +428,6 @@ user_pref("privacy.userContext.ui.enabled", true);
 user_pref("browser.privatebrowsing.forceMediaMemoryCache", true);
 user_pref("pdfjs.enableScripting", false);
 user_pref("dom.battery.enabled", false);
-user_pref(" ", false);
-user_pref(" ", false);
-user_pref(" ", false);
 user_pref("privacy.trackingprotection.enabled", false);
 // Отключает запоминание уровня зума для сайта 
 user_pref("privacy.resistFingerprinting", true);
@@ -529,8 +521,12 @@ user_pref("javascript.options.spectre.object_mitigations.barriers", false);
 user_pref("javascript.options.spectre.object_mitigations.misc", false);
 user_pref("javascript.options.spectre.string_mitigations", false);
 user_pref("javascript.options.spectre.value_masking", false);
-
-
+///
+user_pref("breakpad.reportURL", "");
+user_pref("browser.tabs.crashReporting.sendReport", false); // [FF44+]
+user_pref("dom.push.enabled", false);
+user_pref("app.normandy.enabled", false);
+user_pref("app.normandy.api_url", "");
 /////
 user_pref("browser.safebrowsing.enabled", false);
 user_pref("browser.safebrowsing.downloads.enabled", false);
@@ -656,13 +652,8 @@ user_pref("security.csp.enable", true); // [DEFAULT: true]
 /***/
 user_pref("security.dialog_enable_delay", 1000); // [DEFAULT: 1000]
 user_pref("privacy.sanitize.timeSpan", 0);
-user_pref("dom.storage.next_gen", true); // [DEFAULT: true FF92+]
-user_pref("accessibility.force_disabled", 1);
+user_pref("dom.storage.next_gen", true); // [DEFAULT: true FF92+] API
+user_pref("accessibility.force_disabled", 1); // службы доступности для улучшения производительности
 user_pref("beacon.enabled", false); /* https://developer.mozilla.org/docs/Web/API/Navigator/sendBeacon ***/
-user_pref("breakpad.reportURL", "");
-user_pref("browser.tabs.crashReporting.sendReport", false); // [FF44+]
-user_pref("dom.push.enabled", false);
-user_pref("app.normandy.enabled", false);
-user_pref("app.normandy.api_url", "");
-user_pref("dom.serviceWorkers.enabled", true);
+user_pref("dom.serviceWorkers.enabled", true); // API запросов серверса dom
 
