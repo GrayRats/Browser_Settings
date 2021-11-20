@@ -3,20 +3,20 @@ Browser_Settings
 ## Блокировки Рекламы
 Для Блокировки Рекламы Используйте <br>
 [uBlock Origin ⭐](https://addons.mozilla.org/ru/firefox/addon/ublock-origin/) <br>
-import  [Actually Legitimate URL Shortener Tool](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt)|[uGitHub](https://github.com/DandelionSprout/adfilt/blob/master/LegitimateURLShortener.txt) <br>
- [RU AdList: Counter](https://easylist-downloads.adblockplus.org/cntblock.txt) <br>
- [RU AdList: BitBlock](https://easylist-downloads.adblockplus.org/bitblock.txt) <br>
-maybe, enable AdGuard URL Tracking.
-// В разделе Приватность рекомендуется активировать все фильтры   
-// Для блокировки рекламы на Youtube активируйте фильтр uBlock filters – Annoyances and SponsorBlock для YouTube
-// Для блокировки Yandex Direct достаточно добавить фильтр ->
-// [Counters→](https://easylist-downloads.adblockplus.org/cntblock.txt)
-// Просто вставьте ссылку выше в текстовое поле Импортировать на странице Список фильтров в настройках uBlock 
-// И нажмите Применить
-**Аддоны**<br>
+import  [Actually Legitimate URL Shortener Tool→](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt)|[uGitHub](https://github.com/DandelionSprout/adfilt/blob/master/LegitimateURLShortener.txt) <br>
+ [RU AdList:Counter→](https://easylist-downloads.adblockplus.org/cntblock.txt) <br>
+ [RU AdList:BitBlock→](https://easylist-downloads.adblockplus.org/bitblock.txt) <br>
+maybe, enable AdGuard URL Tracking. <br>
+В разделе Приватность рекомендуется активировать все фильтры   <br>
+Для блокировки рекламы на Youtube активируйте фильтр uBlock filters – Annoyances and SponsorBlock для YouTube <br>
+Для блокировки Yandex Direct достаточно добавить фильтр <br>
+[Counters→](https://easylist-downloads.adblockplus.org/cntblock.txt)
+Просто вставьте ссылку выше в текстовое поле Импортировать на странице Список фильтров в настройках uBlock <br>
+И нажмите ПРЕМИНИТЬ <br>
+**АДДОНЫ**<br>
 [Cookie AutoDelete](https://addons.mozilla.org/firefox/addon/cookie-autodelete/) - авто-удаление печенек, с настройками времени, белых списков и т.д.<br>
 [Cookie Quick Manager](https://addons.mozilla.org/firefox/addon/cookie-quick-manager/) - менеджер, также возвращает возможность просмотра детального списка печенек.<br>
-[Cookie Manager](https://addons.mozilla.org/en-US/firefox/addon/a-cookie-manager/) - ещё один менеджер. Просмотр, редактирование, удаление и поиск печенек.<br>
+[Cookie Manager ✔](https://addons.mozilla.org/en-US/firefox/addon/a-cookie-manager/) - ещё один менеджер. Просмотр, редактирование, удаление и поиск печенек.<br>
 ## Доп.Расширения для защиты вашей приватности
 ⭐[LocalCDN](https://addons.mozilla.org/ru/firefox/addon/localcdn-fork-of-decentraleyes/) безопасный-js <br>
 ⭐[ClearURLs](https://addons.mozilla.org/ru/firefox/addon/clearurls/) - Для блокировки url-рекламы используйте. <br>
@@ -34,14 +34,11 @@ maybe, enable AdGuard URL Tracking.
 можно через ветку реестра: `HKEY_CURRENT_USER\Software\Mozilla\Firefox\Extensions` <br>
 Extensions (in no particular order...)
 ___
-uBlock Origin ✔ Privacy | GitHub
-import Actually Legitimate URL Shortener Tool | GitHub
-___
 Extensions (maybe)
 *
-CanvasBlocker ✔ Privacy | GitHub
-Canvas API:  great fallback if you allow an RFP canvas site exception
-Screen API and Navigator API: don't use with RFP
+CanvasBlocker ✔ Privacy |[GitHub](https://github.com/kkapsner/CanvasBlocker) <br>| <br>
+Canvas API:  great fallback if you allow an RFP canvas site exception <br>
+Screen API and Navigator API: don't use with RFP <br>
 The rest: good protection against naive scripts, detectable with advanced scripts <br> 
 
 ___
