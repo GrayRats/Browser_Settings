@@ -3,7 +3,9 @@ Browser_Settings
 ## Блокировки Рекламы
 Для Блокировки Рекламы Используйте <br>
 [uBlock Origin ⭐](https://addons.mozilla.org/ru/firefox/addon/ublock-origin/) <br>
-import Actually Legitimate URL Shortener Tool[Actually Legitimate URL Shortener Tool](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt)|[uGitHub](https://github.com/DandelionSprout/adfilt/blob/master/LegitimateURLShortener.txt) <br>
+import  [Actually Legitimate URL Shortener Tool](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt)|[uGitHub](https://github.com/DandelionSprout/adfilt/blob/master/LegitimateURLShortener.txt) <br>
+ [RU AdList: Counter](https://easylist-downloads.adblockplus.org/cntblock.txt) <br>
+ [RU AdList: BitBlock](https://easylist-downloads.adblockplus.org/bitblock.txt) <br>
 maybe, enable AdGuard URL Tracking.
 // В разделе Приватность рекомендуется активировать все фильтры   
 // Для блокировки рекламы на Youtube активируйте фильтр uBlock filters – Annoyances and SponsorBlock для YouTube
