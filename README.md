@@ -1,6 +1,28 @@
 Browser_Settings
 
-## Блокировки Рекламы
+**Важное замечание**: Это памятка с интересными настройками и аддонами. Здесь пока (?) нет готового рецепта для максимальной анонимности. Если вы пришли за этим, проследуйте [сюда](https://anonymous-proxy-servers.net/en/jondofox.html) или [сюда](https://www.torproject.org/).
+
+<sub>Стандартный дисклеймер раз: я включил краткие пояснения к каждой настройке и аддону, но если вы четко не понимаете за что они отвечают и что у вас может отвалиться в результате их установки, лучше не трогайте.</sub>
+#### Безопасность
+* [Неплохой обзор от Mozilla](https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections) с описаниями механизмов, из-за которых Firefox может инициировать соединения без прямого приказа пользователя. Еще: [соединения](http://kb.mozillazine.org/Connections_established_on_startup_-_Firefox), устанавливающиеся при запуске браузера. Настройки для отключения подобной самодеятельности есть здесь, в разделе "Настройки".
+* [PrivacyTools.io](https://www.privacytools.io) - сайт, посвященный инструментам для обеспечения приватности. Можно предлагать дополнения и улучшения в их [репозитории на GitHub](https://github.com/privacytoolsIO/privacytools.io).
+* [Evercookie](http://samy.pl/evercookie/). Собирательное название для техник помещения трекинг-идентификаторов в разные труднодоступные места помимо cookies, LSO и DOM Storage.
+* Фингерпринтинг
+  * Такие методы обнаружения, для которых не требуется запись уникального идентификатора на машину пользователя.
+  * [Обзор](https://wiki.mozilla.org/Fingerprinting) методов фингерпринтинга в Mozilla Wiki и [предложения](https://wiki.mozilla.org/Security/Anonymous_Browsing) по улучшению анонимности браузера.
+  * [Обзор](https://www.chromium.org/Home/chromium-security/client-identification-mechanisms) способов идентификации на сайте проекта Chromium.
+  * [Tor Uplft](https://wiki.mozilla.org/Security/Tor_Uplift/Tracking) - проект по переносу патчей Tor Browser в основную ветку Firefox.
+  * Проверить себя на уникальность отпечатка можно на следующих ресурсах:
+    * https://panopticlick.eff.org/
+    * http://ip-check.info/?lang=en
+    * https://amiunique.org/
+    * https://whoer.net/
+    * https://browserleaks.com/
+    * http://browserspy.dk/
+  * Статьи по теме:
+    * [Как Tor Project борется с фингерпринтингом](https://geektimes.ru/post/244484/) [английская версия статьи](https://github.com/KOLANICH/Article-2015-Dull-captaincy-or-the-way-Tor-Project-fights-browser-fingerprinting)).
+    * [Флаги HSTS и их использование для фингерпринтинга](https://geektimes.ru/post/244065/)
+## Блокировки Рекламы 
 Для Блокировки Рекламы Используйте <br>
 [uBlock Origin ⭐](https://addons.mozilla.org/ru/firefox/addon/ublock-origin/) <br>
 import  [Actually Legitimate URL Shortener Tool→](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt)|[uGitHub](https://github.com/DandelionSprout/adfilt/blob/master/LegitimateURLShortener.txt) <br>
