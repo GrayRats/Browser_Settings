@@ -245,7 +245,7 @@ user_pref( "layers.offmainthreadcomposition.async-animations", true);
 // 3д ускорение Force
 user_pref("layers.force-active", true); 
 user_pref("layers.accelerate-all", true);
-user_pref( "layers.acceleration.disabled;false", true);
+user_pref( "layers.acceleration.disabled", false);
 //
 user_pref( "layers.offmainthreadcomposition.enabled", true);
 user_pref( "gfx.webrender.all", true);
