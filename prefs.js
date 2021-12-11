@@ -1,4 +1,4 @@
-/ 1.4 Что отобразит браузер после запуска
+// 1.4 Что отобразит браузер после запуска
 // Значения: 0 -> пустая вкладка, 1 -> домашняя страница, 2 -> последняя посещенная страница 
 // 3 -> восстановление вкладок открытых до закрытия окна браузера
 user_pref("browser.startup.page", 3);
@@ -109,7 +109,7 @@ user_pref("lightweightThemes.recommendedThemes", "");
 // 1.32 Ленивая загрузка ранее открытых вкладок после перезапуска браузера
 // true - загружается только активная вкладка, остальные вкладки загружаются по мере их открытия пользователем
 // false - все вкладки загружаются одновременно после запуска браузера
-user_pref("browser.sessionstore.restore_on_demand", true);
+user_pref("browser.sessionstore.restore_on_demand", true); 
 
 // 1.33 Возможность пожаловаться на расширение при его удалении
 user_pref("extensions.abuseReport.enabled", false);
@@ -171,15 +171,15 @@ user_pref("browser.backspace_actio", 2);
 // 1.47 Вставлять текст нажатием колёсика
 // Замените на True, если хотите включить данную функцию
 user_pref("middlemouse.paste", false);
-
-
-
+////////
+////////
+////////
 user_pref("browser.contentblocking.introCount", 20);
 user_pref("browser.newtabpage.activity-stream.improvesearch.topSiteSearchShortcuts", false);
 user_pref("browser.urlbar.decodeURLsOnCopy", true);
 user_pref("services.sync.prefs.sync.browser.uiCustomization.state", true);
 user_pref("browser.compactmode.show", true);
-//======
+/////======
 // 1.48 Количество строк подсказок в адресной строке
 // Значение -1 полностью отключает подсказки
 user_pref("browser.urlbar.maxRichResults", 15);
@@ -187,9 +187,10 @@ user_pref("browser.urlbar.maxRichResults", 15);
 // Значения true - для каждого сайта свой масштаб false - для всех сайтов одинаковый масштаб
 user_pref("browser.zoom.siteSpecific", true);
 user_pref("nglayout.enable_drag_images", true);
-user_pref("browser.tabs.tabClipWidth", 20);
- 
-
+user_pref("browser.tabs.tabClipWidth", 36);
+user_pref("browser.tabs.closeButtons", false);
+user_pref("browser.tabs.closeTabByDblclick", false);
+user_pref("browser.tabs.tabmanager.enabled", true);
 // 1.53 Включить интеграцию с центром уведомлений Windows 10
 user_pref("alerts.useSystemBackend", true);
 // 1.54 Не отображать уведомление о блокировке содержимого
@@ -212,7 +213,9 @@ user_pref("svg.context-properties.content.enabled", true);
 // 1.64.3 Поддержка эффектов размытия
 user_pref("layout.css.backdrop-filter.enabled", true);
 user_pref("browser.urlbar.suggest.calculator", true);
-
+////////3D
+////////3D
+////////3D
 // 2.2.2 Полное отключение WebGL
 //user_pref("webgl.disabled", true);
 // 2.2.3 Дополнительная обработка изображений с использованием WebGL
@@ -229,16 +232,16 @@ user_pref( "layers.acceleration.force-enabled", true);
 user_pref( "layers.offmainthreadcomposition.enabled", true);
 user_pref( "layers.async-video.enabled", true);
 user_pref( "layers.offmainthreadcomposition.async-animations", true);
+//
 user_pref( "gfx.webrender.all", true);
-
-
+user_pref( "gfx.webrender.enable", true);
 
 // Принудительное декодирование видео видеокартой
 // user_pref("media.hardware-video-decoding.force-enabled", true);
 
 // 2.8 Аппаратное ускорение для Linux систем
 // 2.8.1 Включить Video Acceleration API (VA-API). Для окружений на базе Wayland
-// user_pref("widget.wayland-dmabuf-vaapi.enabled", true);
+user_pref("widget.wayland-dmabuf-vaapi.enabled", true);
 // 2.8.2 Включить FFmpegDataDecoder. Для окружений на базе Wayland
 // user_pref("widget.wayland-dmabuf-webgl.enabled", true);
 user_pref("media.wmf.low-latency.enabled", true);
@@ -257,9 +260,10 @@ user_pref("dom.image-lazy-loading.enabled", true);
 
 //ПАМЯТЬ
 // 4.7 Подгрузка страниц из кэша
-// Включать (true) имеет смысл только если используете дисковый кэш на SSD
-user_pref("network.http.rcwn.enabled", false);    
-
+// Включать (true) имеет смысл только если используете дисковый кэш на SSD !СЕТИ
+user_pref("network.http.rcwn.enabled", true);    
+// выгрузку Firefox в файл подкачки, пока, собственно, браузер свернут
+user_pref("config.trim_on_minimize", "false");
 // 4.11 Включить кэш в оперативной памяти
 user_pref("browser.cache.memory.enable", true);
 ///
@@ -385,7 +389,7 @@ user_pref("security.ssl.enable_ocsp_stapling", true);
 // 7.4 Проверка валидности OCSP через обращение к удостоверяющему центру
 // Значения: 0=Отключено, 1=Включено (по-умолчанию), 2=Только для сайтов с EV сертификатом
 // (!)Данная настройка снижает вашу анонимность, но необходима для безопасности
-user_pref("security.OCSP.enabled", 1);
+user_pref("security.OCSP.enabled", 2);
 
 // 7.5 Сайты не будут загружаться без получения подтверждения через OCSP
 // (!!!) Настройка очень полезна для повышения уровня безопасности, но 
@@ -405,12 +409,16 @@ user_pref("security.tls.enable_delegated_credentials", true);
 // https://blog.mozilla.org/security/2020/01/09/crlite-part-2-end-to-end-design/
 user_pref("security.remote_settings.crlite_filters.enabled", true);
 user_pref("security.pki.crlite_mode", 2);
-
+// Безопасность.
+// ВКЛЮЧИТЬ TrackingProtection
+user_pref("privacy.trackingprotection.enabled", true);
+//
 // 7.10 Заблокировать выполнение скриптов, загружающихся по открытому соединению, на https страницах
 user_pref("security.mixed_content.block_active_content", true); 
 user_pref("privacy.trackingprotection.fingerprinting.enabled", true);
 user_pref("privacy.trackingprotection.cryptomining.enable", true);
 user_pref("privacy.trackingprotection.socialtracking.enabled", true);
+// 
 user_pref("privacy.socialtracking.block_cookies.enabled", true);
 user_pref("privacy.donottrackheader.enabled", true);
 user_pref("toolkit.telemetry.enabled", false);
@@ -421,14 +429,34 @@ user_pref("toolkit.telemetry.firstShutdownPing.enabled", false);
 user_pref("toolkit.telemetry.debugSlowSql ", false);
 user_pref("browser.ping-centre.telemetry", false);
 user_pref("browser.send_pings", false);
-user_pref("browser.send_pings.require_same_host", true);
+user_pref("browser.send_pings.require_same_host", false);
 user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
 user_pref("dom.event.clipboardevents.enabled", false);
+/// Отключить трекинг trackingprotection
+lockPref("browser.trackingprotection.gethashURL", "");
+lockPref("browser.trackingprotection.updateURL", "");
+lockPref("browser.contentblocking.report.cookie.url", "");
+lockPref("browser.contentblocking.report.cryptominer.url", "");
+lockPref("browser.contentblocking.report.endpoint_url", "");
+lockPref("browser.contentblocking.report.fingerprinter.url", "");
+lockPref("browser.contentblocking.report.manage_devices.url", "");
+lockPref("browser.contentblocking.report.mobile-android.url", "");
+lockPref("browser.contentblocking.report.mobile-ios.url", "");
+lockPref("browser.contentblocking.report.proxy_extension.url", "");
+lockPref("browser.contentblocking.report.social.url", "");
+lockPref("browser.contentblocking.report.tracker.url", "");
+lockPref("browser.contentblocking.reportBreakage.url", "");
+///
+lockPref("services.sync.prefs.sync.privacy.trackingprotection.cryptomining.enabled", false);
+lockPref("services.sync.prefs.sync.privacy.trackingprotection.enabled", false);
+lockPref("services.sync.prefs.sync.privacy.trackingprotection.fingerprinting.enabled", false);
+lockPref("services.sync.prefs.sync.privacy.trackingprotection.pbmode.enabled", false);
+////
 user_pref("privacy.userContext.ui.enabled", true);
+////
 user_pref("browser.privatebrowsing.forceMediaMemoryCache", true);
 user_pref("pdfjs.enableScripting", false);
 user_pref("dom.battery.enabled", false);
-user_pref("privacy.trackingprotection.enabled", false);
 // Отключает запоминание уровня зума для сайта 
 user_pref("privacy.resistFingerprinting", true);
 user_pref("privacy.resistFingerprinting.autoDeclineNoUserInputCanvasPrompts", false);
@@ -521,13 +549,13 @@ user_pref("javascript.options.spectre.object_mitigations.barriers", false);
 user_pref("javascript.options.spectre.object_mitigations.misc", false);
 user_pref("javascript.options.spectre.string_mitigations", false);
 user_pref("javascript.options.spectre.value_masking", false);
-///
-user_pref("breakpad.reportURL", "");
+//
+user_pref("breakpad.reportURL", "false");
 user_pref("browser.tabs.crashReporting.sendReport", false); // [FF44+]
 user_pref("dom.push.enabled", false);
 user_pref("app.normandy.enabled", false);
-user_pref("app.normandy.api_url", "");
-/////
+user_pref("app.normandy.api_url", "blank");
+//
 user_pref("browser.safebrowsing.enabled", false);
 user_pref("browser.safebrowsing.downloads.enabled", false);
 user_pref("browser.safebrowsing.provider.google4.dataSharing.enabled", blank);
@@ -553,6 +581,8 @@ user_pref( "browser.safebrowsing.downloads.remote.url", blank);
 user_pref( "safebrowsing.malware.enabled", false);
 user_pref( "safebrowsing.phishing.enabled", true);
 // Отсоединить вкладку, перетащив ее из окна 
+// Дизайна//
+// Дизайна//
 user_pref( "browser.tabs.allowTabDetach", true);
 // главный переключатель нового дизайна. 
 user_pref("browser.proton.doorhangers.enabled", true);
@@ -562,30 +592,32 @@ user_pref("browser.proton.urlbar.enabled", true);
 user_pref("browser.startup.blankWindow", false);
 user_pref("browser.startup.preXulSkeletonUI", true);
 // удобный режим чтения страницы, при котором все, кроме текста удаляется.
-user_pref("reader.color_scheme", "dark");
-user_pref("reader.content_width", 12);
-//////==
+user_pref("reader.color_scheme", "sepia");
+user_pref("reader.content_width", 7);
+user_pref("reader.line_height", 2);
+user_pref("reader.font_size", 6);
+user_pref("reader.toolbar.vertical", true);
+user_pref("reader.errors.includeURLs", false);
+//
+//
+//
 user_pref("browser.link.open_newwindow", "3"); // Открытие ссылок из внешних окон 
 user_pref("browser.link.open_newwindow.override.external", "3"); // Открытие приложнение из внешних окон 
-/////===
 /// Функция позволяет выбрать высоту вкладок и адресной строки
 ///predictor.enabled"disablePrefetch отвечают за предварительное посещение ссылок
 ///fastopen_enable" включает TCP Fast Open
+user_pref("network.tcp.tcp_fastopen_enable", true);
 user_pref("browser.uidensity", 1);
-user_pref("network.allow-experiments", false);
-user_pref("network.cookie.prefsMigrated", true);
+user_pref("network.allow-experiments", false); //телеметрия
+user_pref("network.cookie.prefsMigrated", true); //позволяет сохранять кукисы при смене версий Лисы
 user_pref("network.predictor.enabled", false);
 user_pref("network.warnOnAboutNetworking", false)
 // увидеть ваши закладки с мобильной версии, если у вас подключена синхронизация.
 user_pref("browser.bookmarks.showMobileBookmarks", true);
 // При переключении вкладок отображаются превью страниц
 user_pref("browser.ctrlTab.previews", true);
-//
-user_pref("config.trim_on_minimize", "false");
-///////////
-//
-//
-//
+///
+///////////ШРИФТ/FONTs
 user_pref("findbar.highlightAll", true);
 user_pref("font.internaluseonly.changed", true);
 user_pref("font.minimum-size.x-western", 10);
@@ -636,15 +668,10 @@ user_pref("widget.content.allow-gtk-dark-theme", true);
 user_pref("browser.download.autohideButton", false);
 user_pref("browser.download.panel.shown", true);
 //
-//
-user_pref("dom.ipc.processCount", "8"); /// Измените количество процессов контента ВКЛАДОК 8
-//
+user_pref("dom.ipc.processCount", "8"); /// Измените количество Процессов контента ВКЛАДОК 8
 /// изменить окно просмотра 
 user_pref("gfx.webrender.picture-tile-height", "254");
 user_pref("gfx.webrender.picture-tile-width", " 510");
-
-
-
 ////////////////
 user_pref("security.csp.enable", true); // [DEFAULT: true]
 /* 6004: enforce a security delay on some confirmation dialogs such as install, open/save
@@ -656,4 +683,22 @@ user_pref("dom.storage.next_gen", true); // [DEFAULT: true FF92+] API
 user_pref("accessibility.force_disabled", 1); // службы доступности для улучшения производительности
 user_pref("beacon.enabled", false); /* https://developer.mozilla.org/docs/Web/API/Navigator/sendBeacon ***/
 user_pref("dom.serviceWorkers.enabled", true); // API запросов серверса dom
-
+//
+//
+/// Для воспроизведения video html5 с помощью ffmpeg.БЕЗОПАСНО
+//user_pref("media.fragmented-mp4.exposed", true);
+//user_pref("media.fragmented-mp4.ffmpeg.enabled", true);
+//user_pref("media.mediasource.mp4.enabled", true);
+//user_pref("media.mediasource.youtubeonly", false);
+////
+// Отключаем WebRTC ?
+//user_pref("media.peerconnection.enabled", false);
+//ser_pref("media.peerconnection.ice.default_address_only", true);
+//user_pref("media.peerconnection.ice.no_host", true);
+//user_pref("media.peerconnection.ice.relay_only", true);
+//user_pref("media.peerconnection.ice.tcp", false);
+//user_pref("media.peerconnection.identity.enabled", false);
+//user_pref("media.peerconnection.turn.disable", true);
+//user_pref("media.peerconnection.use_document_iceservers", false);
+//user_pref("media.peerconnection.video.enabled", false);
+//user_pref("media.peerconnection.default_iceservers", "[]");
