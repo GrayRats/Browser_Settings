@@ -1,12 +1,19 @@
+lockPref("browser.preferences.experimental", true);
+//
+// ДатаБаза Index API Violentmonkey (аддон),Twitter, Google Drive,Mega. и др..
+user_pref("dom.indexedDB.enabled", true);
+//user_pref("general.useragent.override", true); //Неправдоподобно выглядящий useragent ломает maps.yandex.ru и много что еще.
+user_pref("svg.disabled", false); //youtube.com (плеер).
+//
 // 1.4 Что отобразит браузер после запуска
 // Значения: 0 -> пустая вкладка, 1 -> домашняя страница, 2 -> последняя посещенная страница 
 // 3 -> восстановление вкладок открытых до закрытия окна браузера
 user_pref("browser.startup.page", 3);
 // 1.6 Минимальная ширина вкладки
-user_pref("browser.tabs.tabMinWidth", 30);
+user_pref("browser.tabs.tabMinWidth", 35);
 // 1.7 Предупреждать при закрытии всех вкладок справа от текущей
 user_pref("browser.tabs.warnOnClose", false);
-
+//
 // 1.8 Предупреждать при закрытии всех вкладок кроме активной
 user_pref("browser.tabs.warnOnCloseOtherTabs", false);
 // 1.9 Настройки анимации
@@ -23,8 +30,7 @@ user_pref("xul.panel-animations.enabled", false);
 // 1.9.8 Задержка перед отрисовкой меню
 user_pref("ui.submenuDelay", 0);
 // 1.10 Не выводить предупреждение при открытии страницы about:config
-user_pref("browser.aboutConfig.showWarning", false); 
- 
+user_pref("browser.aboutConfig.showWarning", false);
 // 1.11 Настройки полноэкранного режима
 // 1.11.1 Отключить предупреждение о переходе в полноэкранный режим
 user_pref("full-screen-api.warning.timeout", 0);
@@ -84,6 +90,7 @@ user_pref("devtools.theme", "dark");
 
 // 1.25 Удалить предустановленные сайты для быстрого доступа по-умолчанию
 user_pref("browser.newtabpage.activity-stream.default.sites", "");
+user_pref("browser.newtabpage.activity-stream.feeds.places", true);
 
 // 1.26 disable hiding mime types (Options>General>Applications) not associated with a plugin */
 user_pref("browser.download.hide_plugins_without_extensions", false);
@@ -98,8 +105,10 @@ user_pref("browser.laterrun.enabled", false);
 
 // 1.29 Отключает замеры времени запуска браузера и предложение сбросить профиль для его ускорения.
 user_pref("browser.slowStartup.notificationDisabled", true);
-
-
+// 1.63 Ввод поисковых запросов прямо в поисковом поле новой вкладки по умолчанию       
+// Без данной настройки ввод будет сразу перескакивать в адрессную строку 
+user_pref("browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar", false);
+//
 // 1.30 Отключает предложение сбросить профиль, если он не использовался 60 дней.
 user_pref("browser.disableResetPrompt", true);
 
@@ -174,6 +183,7 @@ user_pref("middlemouse.paste", false);
 ////////
 ////////
 ////////
+user_pref("browser.newtabpage.enhanced", true);
 user_pref("browser.contentblocking.introCount", 20);
 user_pref("browser.newtabpage.activity-stream.improvesearch.topSiteSearchShortcuts", false);
 user_pref("browser.urlbar.decodeURLsOnCopy", true);
@@ -232,10 +242,18 @@ user_pref( "layers.acceleration.force-enabled", true);
 user_pref( "layers.offmainthreadcomposition.enabled", true);
 user_pref( "layers.async-video.enabled", true);
 user_pref( "layers.offmainthreadcomposition.async-animations", true);
+// 3д ускорение Force
+user_pref("layers.force-active", true); 
+user_pref("layers.accelerate-all", true);
+user_pref( "layers.acceleration.disabled;false", true);
 //
+user_pref( "layers.offmainthreadcomposition.enabled", true);
 user_pref( "gfx.webrender.all", true);
 user_pref( "gfx.webrender.enable", true);
-
+user_pref( "layers.omtp.enabled", true);
+//
+user_pref( "gfx.canvas.azure.accelerated", true);
+user_pref( "gfx.webrender.compositor.force-enabled", true); //рекомендуется использовать композитор С ВидеоКартой
 // Принудительное декодирование видео видеокартой
 // user_pref("media.hardware-video-decoding.force-enabled", true);
 
@@ -266,12 +284,10 @@ user_pref("network.http.rcwn.enabled", true);
 user_pref("config.trim_on_minimize", "false");
 // 4.11 Включить кэш в оперативной памяти
 user_pref("browser.cache.memory.enable", true);
-///
+//
 /////////////////////////////////////////////////////////////
 // 5. Настройки DNS /////////////////////////////////////////
 /////////////////////////////////////////////////////////////
-
-
 / 5.1 Базовая настройка DNS
 // Возможные значения:
 // 0=Использовать DNS системы
@@ -279,13 +295,12 @@ user_pref("browser.cache.memory.enable", true);
 // 3=Использовать только безопасный и поддерживающий шифрование DNS over HTTPS (DOH)
 // Обратите внимание, что для определения сервера DOH и телеметрии будет продолжать использоваться DNS ОС по-умолчанию
 user_pref("network.trr.mode", 3);
-
+// user_pref(" ", false);
 // 5.2 URL сервера DNS over HTTPS (DOH), который вы желаете использовать
 // Для максимальной безопасности из коробки, а также для фильтрации рекламы
 // Рекомендую использовать NextDNS - https://nextdns.io/?from=ujt3ybkq (реферальная ссылка)
 // NextDNS предлагает 300 000 запросов в месяц бесплатно (хватает большинству обычных пользователей), 
 // А затем переходит в режим классического DNS сервера без фильтрации
-// Безлимитный тариф стоит чуть менее 2 долларов в месяц
 
 // По-умолчанию настроен Comss.one DNS - https://www.comss.ru/page.php?id=7315
 user_pref("network.trr.uri", "https://dns.comss.one/dns-query");
@@ -294,19 +309,19 @@ user_pref("network.trr.custom_uri", "https://dns.comss.one/dns-query");
 // Вариативно - https://controld.com/ от Winscribe (сервера по всему миру, фильтрация вирусов, рекламы и трекинга)
 //user_pref("network.trr.uri", "https://freedns.controld.com/p2");
 //user_pref("network.trr.custom_uri", "https://freedns.controld.com/p2");
-
+//
 // Вариативно - https://ahadns.com/ (сервер в Польше, фильтрация вирусов, рекламы и трекинга)
 //user_pref("network.trr.uri", "https://doh.pl.ahadns.net/dns-query");
 //user_pref("network.trr.custom_uri", "https://doh.pl.ahadns.net/dns-query");
-
-
+//
+//
 // 5.3 Использовать DOH без исключений, в том числе при активном VPN и подключении через Proxy
 user_pref("network.dns.skipTRR-when-parental-control-enabled", false);
 user_pref("network.trr.enable_when_nrpt_detected", true);
 user_pref("network.trr.enable_when_proxy_detected", true);
 user_pref("network.trr.enable_when_vpn_detected", true);
 user_pref("network.proxy.socks_remote_dns", true);
-
+//
 // 5.4 Отключить поддержку соединения с DNS через IPv6 
 //user_pref("network.dns.disableIPv6", true);
 // 5.4.1 Не ждать IPv6
@@ -315,39 +330,39 @@ user_pref("network.trr.early-AAAA ", false);
 user_pref("network.trr.skip-AAAA-when-not-supported", true);
 // 5.4.3 Ждать ответа с записями для доступа к сайту и по IPv4 и по IPv6
 user_pref("network.trr.wait-for-A-and-AAAA", false); 
-
+//
 // 5.5 Активировать eSNI в режиме соединения через DOH для шифрования DNS запросов, 
 // чтобы скрыть их от вашего провайдера 
 // В актуальных версиях Firefox поддержка eSNI завершена
 user_pref("network.security.esni.enabled", true);
-
+//
 // 5.6 Активация ECH (Encrypted Client Hello) - пришло вместо ESNI в FF 85, решает схожие задачи
 user_pref("network.dns.echconfig.enabled", true);
 user_pref("network.dns.use_https_rr_as_altsvc", true);
-
+//
 // 5.7 Вы можете установить IP адрес DNS сервера установленного в (5.2) для того, чтобы браузер не искал его
 // у DNS сервера установленного в ОС по-умолчанию
 // Обычно в данной настройке нет необходимости
 // user_pref("network.trr.bootstrapAddress", "");
-
+//
 // 5.8 Частота с которой Firefox повторно обращается к DOH серверу для обновления данных
 user_pref("network.trr.blacklist-duration", 60);
-
+//
 // 5.9 Не отправить DNS серверу User Agent браузера
 user_pref("network.trr.send_user-agent_headers", false); 
-
+//
 // 5.10 Отключить предварительный опрос DNS сервера об имеющихся на странице ссылках
 // http://kb.mozillazine.org/Network.dns.disablePrefetch
 // Установите оба значения true если желаете отключить данную функцию
 // В значении false браузер будет заранее опрашивать DNS сервер
 user_pref("network.dns.disablePrefetch", false);
 user_pref("network.dns.disablePrefetchFromHTTPS", false);
-
+//
 user_pref("dom.disable_window_open_feature.close", true);
-
+//
 // 7.27 Запрет скриптам скрывать адресную строку
 user_pref("dom.disable_window_open_feature.location", true);
-
+//
 // 7.28 Запрет скриптам передвигать и изменять размер окон браузера
 user_pref("dom.disable_window_move_resize", true);
 
@@ -359,7 +374,7 @@ user_pref("dom.disable_window_move_resize", true);
 // 1=Браузер видит данный режим, но сертификат не импортируется
 // 2=При обнаружении режима семейной безопасности импортируется сертификат, дающий Windows возможность управлять трафиком браузера
 user_pref("security.family_safety.mode", 0);
-
+//
 // 7.8 Проверка сертификатов на надёжности подписавшего их удостоверяющего центра
 // https://wiki.mozilla.org/SecurityEngineering/Public_Key_Pinning
 // Возможные значения 0=Отключено 1=Разрешение для локально установленных (например антивирусом), 2=Строгая проверка
@@ -368,14 +383,13 @@ user_pref("security.cert_pinning.enforcement_level", 2);
 user_pref("security.insecure_connection_icon.enabled", true);
 user_pref("security.insecure_connection_text.enabled", true);
 user_pref("security.insecure_connection_text.pbmode.enabled", true);
-
+//
 user_pref("gfx.font_rendering.opentype_svg.enabled", false);
 user_pref("gfx.font_rendering.graphite.enabled", false);
-
-
+//
 // 7.1 Блокировка подключения к хостам использующим устаревшие и потенциально уязвимые протоколы шифрования SSL/TLS
 // https://wiki.mozilla.org/Security:Renegotiation#security.ssl.require_safe_negotiation
-user_pref("security.ssl.require_safe_negotiation", true);
+user_pref("security.ssl.require_safe_negotiation", true);  Instagram, Mega.nz, многие другие.
 
 // 7.2 Запрет на использование устаревших и уязвимых TLS 1.0 и 1.1
 user_pref("security.tls.version.enable-deprecated", false);
@@ -431,7 +445,10 @@ user_pref("browser.ping-centre.telemetry", false);
 user_pref("browser.send_pings", false);
 user_pref("browser.send_pings.require_same_host", false);
 user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
-user_pref("dom.event.clipboardevents.enabled", false);
+// Позволяет сайту следить за действиями пользователя, когда он копирует выделенный текст.копирование текста из редактора).
+user_pref("dom.event.clipboardevents.enabled", true); // НеРекомендуется
+// dom performance Отключаем передачу браузером информации о времени начала и окончания загрузки страницы pornhub.com (авторизация).
+user_pref("dom.enable_performance", "true");
 /// Отключить трекинг trackingprotection
 lockPref("browser.trackingprotection.gethashURL", "");
 lockPref("browser.trackingprotection.updateURL", "");
@@ -477,8 +494,6 @@ user_pref("network.cookie.cookieBehavior", 4);
 // по состоянию на 10.06.2021 данный шифр используется популярный хостинг изображений radikal.ru
 // но для максимальной безопасности я рекомендую его отключить (установить значение false)
 user_pref("security.ssl3.rsa_des_ede3_sha", true);
-
-user_pref(" ", false);
 // 7.12.2 Отключение некоторых устаревших алгоритмов
 user_pref("security.ssl3.ecdhe_ecdsa_aes_256_sha", false);
 user_pref("security.ssl3.ecdhe_ecdsa_aes_128_sha", false);
@@ -508,8 +523,9 @@ user_pref("security.ssl3.ecdhe_rsa_null_sha", false);
 user_pref("security.ssl3.ecdhe_ecdsa_null_sha", false);
 user_pref("security.ssl3.ecdh_rsa_null_sha", false);
 user_pref("security.ssl3.ecdh_ecdsa_null_sha", false);
-
-
+// 1.62 Отключает текстовое сообщения о проигрываемом медиа во второй строке ниже названия вкладки
+//
+user_pref("browser.tabs.secondaryTextUnsupportedLocales", "ar,bn,bo,ckb,fa,gu,he,hi,ja,km,kn,ko,lo,mr,my,ne,pa,si,ta,te,th,ur,zh,ru")
 // 7.13 Отключение технологии 0-RTT (round-trip time)
 // 0-RTT позволяет отправить часть данных серверу до согласования с ним шифрования,
 // что может быть небезопасно в исключительных ситуациях
@@ -583,6 +599,7 @@ user_pref( "safebrowsing.phishing.enabled", true);
 // Отсоединить вкладку, перетащив ее из окна 
 // Дизайна//
 // Дизайна//
+user_pref("layout.css.devPixelsPerPx", "1.00"); // Масштабирование ИнтерфейсА
 user_pref( "browser.tabs.allowTabDetach", true);
 // главный переключатель нового дизайна. 
 user_pref("browser.proton.doorhangers.enabled", true);
@@ -590,6 +607,7 @@ user_pref("browser.proton.infobars.enabled", true);
 user_pref("browser.proton.places-tooltip.enabled", true);
 user_pref("browser.proton.urlbar.enabled", true);
 user_pref("browser.startup.blankWindow", false);
+user_pref("browser.startup.homepage.abouthome_cache.enabled", true);
 user_pref("browser.startup.preXulSkeletonUI", true);
 // удобный режим чтения страницы, при котором все, кроме текста удаляется.
 user_pref("reader.color_scheme", "sepia");
@@ -650,7 +668,7 @@ user_pref("font.name.serif.x-western"           , "PT Serif");
 //
 //
 //
-user_pref("gfx.text.disable-aa", "false"); // отключает сглаживание firefox
+user_pref("gfx.text.disable-aa", "true"); // отключает сглаживание firefox
 user_pref("gfx.font_rendering.cleartype_params.rendering_mode", "5");
 user_pref("gfx.font_rendering.cleartype_params.cleartype_level", "100");
 user_pref("gfx.font_rendering.cleartype_params.enhanced_contrast", "1000");
@@ -658,7 +676,7 @@ user_pref("gfx.font_rendering.cleartype_params.gamma", "2200");
 user_pref("gfx.use_text_smoothing_setting", true);
 user_pref("gfx.canvas.azure.backends", "direct2d1.1,skia,cairo");
 //
-//////
+//
 user_pref("media.autoplay.enabled", false);
 user_pref("media.av1.enabled", true);
 // GTK
@@ -685,13 +703,17 @@ user_pref("beacon.enabled", false); /* https://developer.mozilla.org/docs/Web/AP
 user_pref("dom.serviceWorkers.enabled", true); // API запросов серверса dom
 //
 //
-/// Для воспроизведения video html5 с помощью ffmpeg.БЕЗОПАСНО
+// Для воспроизведения video html5 с помощью ffmpeg.БЕЗОПАСНО
 //user_pref("media.fragmented-mp4.exposed", true);
 //user_pref("media.fragmented-mp4.ffmpeg.enabled", true);
 //user_pref("media.mediasource.mp4.enabled", true);
 //user_pref("media.mediasource.youtubeonly", false);
-////
+//
+//
+// Кеш в tmpfs для уменьшения износа дисков
+user_pref("browser.cache.disk.parent_directory", "/tmp/username-cache-firefox");
 // Отключаем WebRTC ?
+user_pref("privacy.webrtc.globalMuteToggles", true);  // WebRTC Global Mute Toggles
 //user_pref("media.peerconnection.enabled", false);
 //ser_pref("media.peerconnection.ice.default_address_only", true);
 //user_pref("media.peerconnection.ice.no_host", true);
@@ -702,3 +724,17 @@ user_pref("dom.serviceWorkers.enabled", true); // API запросов серв�
 //user_pref("media.peerconnection.use_document_iceservers", false);
 //user_pref("media.peerconnection.video.enabled", false);
 //user_pref("media.peerconnection.default_iceservers", "[]");
+// Включает механизм отправки нескольких HTTP запросов не дожидаясь ответов. Немного ускоряет.
+user_pref("network.http.pipelining", true);
+user_pref("network.http.pipelining.ssl", true);
+user_pref("network.http.proxy.pipelining", true);
+
+
+user_pref("layout.css.osx-font-smoothing.enabled", true);
+user_pref("layout.word_select.stop_at_punctuation", true);
+
+
+// experimentis подстройки
+user_pref("dom.indexedDB.experimental", false);
+user_pref("media.mediasource.experimental.enabled", false);
+
