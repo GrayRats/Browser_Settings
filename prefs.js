@@ -737,4 +737,5 @@ user_pref("layout.word_select.stop_at_punctuation", true);
 // experimentis подстройки
 user_pref("dom.indexedDB.experimental", false);
 user_pref("media.mediasource.experimental.enabled", false);
-
+user_pref("dom.media.autoplay.autoplay-policy-api", true);
+user_pref("media.wmf.low-latency.enabled", false);
