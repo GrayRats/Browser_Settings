@@ -1,5 +1,6 @@
 lockPref("browser.preferences.experimental", true);
 //
+user_pref("devtools.debugger.remote-enabled", false);
 user_pref("accessibility.force_disabled", true); // Функция запрещает службам поддержки доступности доступ к вашему браузеру. 
 //
 // ДатаБаза Index API Violentmonkey (аддон),Twitter, Google Drive,Mega. и др..
@@ -286,6 +287,8 @@ user_pref("browser.cache.memory.enable", true);
 /////////////////////////////////////////////////////////////
 // 5. Настройки DNS /////////////////////////////////////////
 /////////////////////////////////////////////////////////////
+// * 1272: display advanced information on Insecure Connection warning pages
+user_pref("browser.xul.error_pages.expert_bad_cert", true); 
 / 5.1 Базовая настройка DNS
 // Возможные значения:
 // 0=Использовать DNS системы
