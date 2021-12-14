@@ -487,8 +487,7 @@ user_pref("network.cookie.cookieBehavior", 4);
 //  2 = блокировать все файлы Cookie по умолчанию
 //  3 = блокировать файлы Cookie от ранее не знакомых сайтов
 //  4 = новая политика хранения файлов Cookie (предотвращение доступа к хранилищу для трекеров)
-
-
+//
 // 7.12 Блокировка небезопасных алгоритмов шифрования, уязвимых для хакерских атак
 // 7.12.1 Отключение 3DES с размером ключа < 128 и отсутствием поддержки Perfect forward secrecy (PFS)
 // по состоянию на 10.06.2021 данный шифр используется популярный хостинг изображений radikal.ru
@@ -532,7 +531,7 @@ user_pref("browser.tabs.secondaryTextUnsupportedLocales", "ar,bn,bo,ckb,fa,gu,he
 // (!) Данная настройка незначительно увеличивает время соединения с https сайтами
 // https://blog.cloudflare.com/tls-1-3-overview-and-q-and-a/
 user_pref("security.tls.enable_0rtt_data", false);
-/ 7.13.1  Отключение технологии, ускоряющей на 30% установку SSL соединения за счет
+// 7.13.1  Отключение технологии, ускоряющей на 30% установку SSL соединения за счет
 // объединения ряда запросов при согласовании зашифрованного канала
 // Функция отключена, так как ранее Firefox имел уязвимость связанную с данной настройки,
 // которая потенциально может быть до сих пор актуальна
@@ -622,7 +621,7 @@ user_pref("reader.errors.includeURLs", false);
 user_pref("browser.link.open_newwindow", "3"); // Открытие ссылок из внешних окон 
 user_pref("browser.link.open_newwindow.override.external", "3"); // Открытие приложнение из внешних окон 
 /// Функция позволяет выбрать высоту вкладок и адресной строки
-///predictor.enabled"disablePrefetch отвечают за предварительное посещение ссылок
+///predictor.enabled ="disable Prefetch отвечают за предварительное посещение ссылок
 ///fastopen_enable" включает TCP Fast Open
 user_pref("network.tcp.tcp_fastopen_enable", true);
 user_pref("browser.uidensity", 1);
@@ -668,7 +667,7 @@ user_pref("font.name.serif.x-western"           , "PT Serif");
 //
 //
 //
-user_pref("gfx.text.disable-aa", "true"); // отключает сглаживание firefox
+user_pref("gfx.text.disable-aa", "false"); // отключает сглаживание firefox
 user_pref("gfx.font_rendering.cleartype_params.rendering_mode", "5");
 user_pref("gfx.font_rendering.cleartype_params.cleartype_level", "100");
 user_pref("gfx.font_rendering.cleartype_params.enhanced_contrast", "1000");
@@ -699,11 +698,12 @@ user_pref("security.dialog_enable_delay", 1000); // [DEFAULT: 1000]
 user_pref("privacy.sanitize.timeSpan", 0);
 user_pref("dom.storage.next_gen", true); // [DEFAULT: true FF92+] API
 user_pref("accessibility.force_disabled", 1); // службы доступности для улучшения производительности
-user_pref("beacon.enabled", false); /* https://developer.mozilla.org/docs/Web/API/Navigator/sendBeacon ***/
+user_pref("beacon.enabled", false); //* https://developer.mozilla.org/docs/Web/API/Navigator/sendBeacon ***/
 user_pref("dom.serviceWorkers.enabled", true); // API запросов серверса dom
 //
 //
-// Для воспроизведения video html5 с помощью ffmpeg.БЕЗОПАСНО
+// Для воспроизведения video html5 с помощью ffmpeg
+// БЕЗОПАСНО
 //user_pref("media.fragmented-mp4.exposed", true);
 //user_pref("media.fragmented-mp4.ffmpeg.enabled", true);
 //user_pref("media.mediasource.mp4.enabled", true);
@@ -711,7 +711,7 @@ user_pref("dom.serviceWorkers.enabled", true); // API запросов серв�
 //
 //
 // Кеш в tmpfs для уменьшения износа дисков
-user_pref("browser.cache.disk.parent_directory", "/tmp/username-cache-firefox");
+// user_pref("browser.cache.disk.parent_directory", "/tmp/username-cache-firefox");
 // Отключаем WebRTC ?
 user_pref("privacy.webrtc.globalMuteToggles", true);  // WebRTC Global Mute Toggles
 //user_pref("media.peerconnection.enabled", false);
@@ -728,12 +728,11 @@ user_pref("privacy.webrtc.globalMuteToggles", true);  // WebRTC Global Mute Togg
 user_pref("network.http.pipelining", true);
 user_pref("network.http.pipelining.ssl", true);
 user_pref("network.http.proxy.pipelining", true);
-
-
+//
 user_pref("layout.css.osx-font-smoothing.enabled", true);
 user_pref("layout.word_select.stop_at_punctuation", true);
-
-
+//
+//
 // experimentis подстройки
 user_pref("dom.indexedDB.experimental", true);
 user_pref("media.mediasource.experimental.enabled", true);
