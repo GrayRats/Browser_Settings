@@ -1,5 +1,7 @@
 lockPref("browser.preferences.experimental", true);
 //
+user_pref("accessibility.force_disabled", true); // Функция запрещает службам поддержки доступности доступ к вашему браузеру. 
+//
 // ДатаБаза Index API Violentmonkey (аддон),Twitter, Google Drive,Mega. и др..
 user_pref("dom.indexedDB.enabled", true);
 //user_pref("general.useragent.override", true); //Неправдоподобно выглядящий useragent ломает maps.yandex.ru и много что еще.
@@ -47,7 +49,7 @@ user_pref("startup.homepage_welcome_url", "");
 user_pref("startup.homepage_welcome_url.additional", "");
 user_pref("browser.aboutwelcome.enabled", false);
 //
-/ 1.13 Не показывать страницу с информацией об установленном обновлении
+// 1.13 Не показывать страницу с информацией об установленном обновлении
 user_pref("browser.startup.homepage_override.mstone", "ignore"); 
 // Disable stat collection
 user_pref("media.video_stats.enabled", false);
@@ -73,7 +75,7 @@ user_pref("browser.urlbar.ctrlCanonizesURLs", false);
 user_pref("browser.urlbar.experimental.firefoxSuggestLabels.enabled", true);
 user_pref("browser.urlbar.quicksuggest.enabled", false);
 user_pref("browser.urlbar.eventTelemetry.enabled", false);
- 
+//
 ///
 user_pref("datareporting.healthreport.uploadEnabled", false);
 user_pref("datareporting.policy.dataSubmissionEnabled", false);
@@ -119,12 +121,9 @@ user_pref("lightweightThemes.recommendedThemes", "");
 // true - загружается только активная вкладка, остальные вкладки загружаются по мере их открытия пользователем
 // false - все вкладки загружаются одновременно после запуска браузера
 user_pref("browser.sessionstore.restore_on_demand", true); 
-
+//
 // 1.33 Возможность пожаловаться на расширение при его удалении
 user_pref("extensions.abuseReport.enabled", false);
-
-
-
 // 1.34 Настройки плавной прокрутки страниц
 user_pref("general.smoothScroll", true);
 user_pref("general.smoothScroll.currentVelocityWeighting", "0.1");
@@ -132,25 +131,25 @@ user_pref("general.smoothScroll.mouseWheel.durationMaxMS", 250);
 user_pref("general.smoothScroll.mouseWheel.durationMinMS", 125);
 user_pref("general.smoothScroll.stopDecelerationWeighting", "0.7");
 user_pref("mousewheel.min_line_scroll_amount", 25);
-
+//
 // 1.35 Разрешить скриптам и сайтам изменять контекстное меню  вызываемое по правому клику мыши
 user_pref("dom.event.contextmenu.enabled", true);
-
+//
 // 1.36 Запретить скриптам вызывать более 3 всплывающих окон подряд
 user_pref("dom.popup_maximum", 3);
-
+//
 // 1.37 Убрать пунктирную рамку у ссылок
 user_pref("browser.display.focus_ring_width", 0);
-
-
+//
+//
 // 1.38 Скрыть панель "Что нового" в меню
 user_pref("browser.messaging-system.whatsNewPanel.enabled", false);
-
+//
 // 1.39 Частота проверки страницы на изменения для перезагрузки кэша и обновления
 // Возможные значения 0=один раз за сессию 1=каждый раз при просмотре страницы
 // 2=не проверять, использовать кэш браузера 3=проверять, когда страница устарела (определяется автоматически)
 user_pref("browser.cache.check_doc_frequency", 1);
-
+//
 // 1.41 Не выгружать вкладки (не усыплять) даже если не хватает свободной памяти
 user_pref("browser.tabs.unloadOnLowMemory", false);
 
@@ -205,14 +204,12 @@ user_pref("browser.tabs.tabmanager.enabled", true);
 user_pref("alerts.useSystemBackend", true);
 // 1.54 Не отображать уведомление о блокировке содержимого
 user_pref("browser.contentblocking.introCount", 20);
-
+//
 // 1.56 Отображать избранные сайты на странице новой вкладки по умолчанию в 4 столбца
 user_pref("browser.newtabpage.activity-stream.section.highlights.rows", 6);
 user_pref("browser.newtabpage.activity-stream.topSitesRows", 5);
 user_pref("browser.newtabpage.activity-stream.section.topstories.rows", 0);
-
-//==-=-==-=
-
+// ==-=-==-=
 // 1.64.1 Позволяет использовать пользовательские таблицы стилей в папке chrome в папке профиля пользователя
 // Рекомендую данный твик интерфейса https://github.com/black7375/Firefox-UI-Fix
 // (!) Но я не имею отношения к его авторам и не несу никакой ответственности (как обычно)
@@ -233,6 +230,8 @@ user_pref("webgl.angle.force-warp", true);
 user_pref("webgl.msaa-force", true);
 // 2.2.4 Выполнение отрисовки некоторых отдельных элементов страницы через WebGL в отдельном потоке
 user_pref("gfx.offscreencanvas.enabled", true);
+// Firefox может автоматически определять сколько ядер или потоков имеет процессор в компьютере.
+user_pref("dom.maxHardwareConcurrency", 12);
 // 2.6 Рендер PDF средствами видеокарты
 user_pref("pdfjs.enableWebGL", true);
 user_pref("javascript.options.warp", true);
@@ -245,7 +244,7 @@ user_pref( "layers.offmainthreadcomposition.async-animations", true);
 // 3д ускорение Force
 user_pref("layers.force-active", true); 
 user_pref("layers.accelerate-all", true);
-user_pref( "layers.acceleration.disabled;false", true);
+user_pref( "layers.acceleration.disabled", false);
 //
 user_pref( "layers.offmainthreadcomposition.enabled", true);
 user_pref( "gfx.webrender.all", true);
@@ -266,9 +265,8 @@ user_pref("media.wmf.low-latency.enabled", true);
 user_pref("nglayout.initialpaint.delay", 10);
 // после которых браузер будет ожидать полную загрузку
 user_pref("content.notify.backoffcount", 5);
-
-
-
+//
+user_pref ("security.data_uri.block_toplevel_data_uri_navigations", true);
 // 3.3 Время выполнения JS скриптов (10мс по умолчанию) для медленных сетей лучше увеличить
 user_pref("dom.max_script_run_time", 30);
 user_pref("dom.max_script_run_time_without_important_user_input", 30);
@@ -315,6 +313,10 @@ user_pref("network.trr.custom_uri", "https://dns.comss.one/dns-query");
 //user_pref("network.trr.custom_uri", "https://doh.pl.ahadns.net/dns-query");
 //
 //
+user_pref("network.cookie.same-site.enabled", true);
+user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
+user_pref("webextensions.tests", false);
+user_pref("extensions.getAddons.showPane", false);
 // 5.3 Использовать DOH без исключений, в том числе при активном VPN и подключении через Proxy
 user_pref("network.dns.skipTRR-when-parental-control-enabled", false);
 user_pref("network.trr.enable_when_nrpt_detected", true);
@@ -404,7 +406,8 @@ user_pref("security.ssl.enable_ocsp_stapling", true);
 // Значения: 0=Отключено, 1=Включено (по-умолчанию), 2=Только для сайтов с EV сертификатом
 // (!)Данная настройка снижает вашу анонимность, но необходима для безопасности
 user_pref("security.OCSP.enabled", 2);
-
+// 2705 : отключить файлы cookie HTTP-сайтов с помощью директивы "secure" [FF52 +]
+user_pref ("network.cookie.leave-secure-alone", true);
 // 7.5 Сайты не будут загружаться без получения подтверждения через OCSP
 // (!!!) Настройка очень полезна для повышения уровня безопасности, но 
 // часто ломает DNS over HTTPS в портативных и стабильных версиях Firefox
@@ -449,7 +452,9 @@ user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
 user_pref("dom.event.clipboardevents.enabled", true); // НеРекомендуется
 // dom performance Отключаем передачу браузером информации о времени начала и окончания загрузки страницы pornhub.com (авторизация).
 user_pref("dom.enable_performance", "true");
+lockPref("full-screen-api.warning.timeout", "false");
 /// Отключить трекинг trackingprotection
+lockPref("extensions.htmlaboutaddons.discover.enabled", "false");
 lockPref("browser.trackingprotection.gethashURL", "");
 lockPref("browser.trackingprotection.updateURL", "");
 lockPref("browser.contentblocking.report.cookie.url", "");
@@ -470,6 +475,8 @@ lockPref("services.sync.prefs.sync.privacy.trackingprotection.fingerprinting.ena
 lockPref("services.sync.prefs.sync.privacy.trackingprotection.pbmode.enabled", false);
 ////
 user_pref("privacy.userContext.ui.enabled", true);
+// включить частный контейнер для загрузки миниатюр [FF51 +]
+user_pref("privacy.usercontext.about_newtab_segregation.enabled", true);
 ////
 user_pref("pdfjs.enableScripting", false);
 user_pref("dom.battery.enabled", false);
@@ -555,7 +562,7 @@ user_pref("devtools.webide.autoinstallFxdtAdapters", false);
 user_pref("network.security.ports.banned", "4444,9050,9051,69,137,161,1719,1720,1723,6566,5060,5061,10080");
 
 user_pref("privacy.window.name.update.enabled", true);
-
+user_pref("browser.urlbar.filter.javascript", true);
 // Отключение может незначительно повысить производительность браузера, но только на ваш страх и риск
 user_pref("javascript.options.spectre.index_masking", false);
 user_pref("javascript.options.spectre.jit_to_C++_calls", false);
@@ -600,6 +607,9 @@ user_pref( "safebrowsing.phishing.enabled", true);
 user_pref("layout.css.devPixelsPerPx", "1.00"); // Масштабирование ИнтерфейсА
 user_pref( "browser.tabs.allowTabDetach", true);
 // главный переключатель нового дизайна. 
+// Различные анимированные украшательства браузера.Например, при закрытии центральной вкладки, правая плавно подползает к левой.
+user_pref("toolkit.cosmeticAnimations.enabled", true);
+//
 user_pref("browser.proton.doorhangers.enabled", true);
 user_pref("browser.proton.infobars.enabled", true);
 user_pref("browser.proton.places-tooltip.enabled", true);
@@ -614,6 +624,8 @@ user_pref("reader.line_height", 2);
 user_pref("reader.font_size", 6);
 user_pref("reader.toolbar.vertical", true);
 user_pref("reader.errors.includeURLs", false);
+//
+lockPref("browser.sessionhistory.max_total_viewers", 9);
 //
 //
 //
@@ -690,9 +702,9 @@ user_pref("gfx.webrender.picture-tile-height", "254");
 user_pref("gfx.webrender.picture-tile-width", " 510");
 ////////////////
 user_pref("security.csp.enable", true); // [DEFAULT: true]
-/* 6004: enforce a security delay on some confirmation dialogs such as install, open/save
-/* [1] https://www.squarefree.com/2004/07/01/race-conditions-in-security-dialogs/ 
-/***/
+//* 6004: enforce a security delay on some confirmation dialogs such as install, open/save
+//* [1] https://www.squarefree.com/2004/07/01/race-conditions-in-security-dialogs/ 
+//***/
 user_pref("security.dialog_enable_delay", 1000); // [DEFAULT: 1000]
 user_pref("privacy.sanitize.timeSpan", 0);
 user_pref("dom.storage.next_gen", true); // [DEFAULT: true FF92+] API
@@ -712,6 +724,8 @@ user_pref("dom.serviceWorkers.enabled", true); // API запросов серв�
 // Кеш в tmpfs для уменьшения износа дисков
 // user_pref("browser.cache.disk.parent_directory", "/tmp/username-cache-firefox"); linux
 user_pref("browser.privatebrowsing.forceMediaMemoryCache", false);
+// отключить общую память (защита от Spectre)
+user_pref ("javascript.options.shared_memory", true);
 // Отключаем WebRTC ?
 user_pref("privacy.webrtc.globalMuteToggles", true);  // WebRTC Global Mute Toggles
 //user_pref("media.peerconnection.enabled", false);
@@ -739,3 +753,5 @@ user_pref("media.mediasource.experimental.enabled", true);
 //MEDIA/AUDIO
 user_pref("dom.media.autoplay.autoplay-policy-api", true);
 user_pref("media.wmf.low-latency.enabled", false);
+//
+user_pref("network.IDN_show_punycode", false); // показать punycode (из-за последней подделки URL-адреса conerns) 
