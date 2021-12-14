@@ -471,7 +471,6 @@ lockPref("services.sync.prefs.sync.privacy.trackingprotection.pbmode.enabled", f
 ////
 user_pref("privacy.userContext.ui.enabled", true);
 ////
-user_pref("browser.privatebrowsing.forceMediaMemoryCache", true);
 user_pref("pdfjs.enableScripting", false);
 user_pref("dom.battery.enabled", false);
 // Отключает запоминание уровня зума для сайта 
@@ -711,7 +710,8 @@ user_pref("dom.serviceWorkers.enabled", true); // API запросов серв�
 //
 //
 // Кеш в tmpfs для уменьшения износа дисков
-// user_pref("browser.cache.disk.parent_directory", "/tmp/username-cache-firefox");
+// user_pref("browser.cache.disk.parent_directory", "/tmp/username-cache-firefox"); linux
+user_pref("browser.privatebrowsing.forceMediaMemoryCache", false);
 // Отключаем WebRTC ?
 user_pref("privacy.webrtc.globalMuteToggles", true);  // WebRTC Global Mute Toggles
 //user_pref("media.peerconnection.enabled", false);
