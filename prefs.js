@@ -374,6 +374,18 @@ user_pref("dom.disable_window_move_resize", true);
 ////////////////////////////////////////////////////////////
 // 7. Безопасность //////////////////////////////////////////
 /////////////////////////////////////////////////////////////
+// Загрузка небезопасных фаилова.
+user_pref("privacy.cpd.downloads", false);
+user_pref("dom.block_download_insecure", false);
+user_pref("browser.safebrowsing.downloads.remote.url", "");
+user_pref("browser.safebrowsing.downloads.enabled", false);
+user_pref("security.remote_settings.intermediates.parallel_downloads", 8);
+user_pref("browser.safebrowsing.downloads.remote.enabled", false);
+user_pref("", false);
+user_pref("browser.safebrowsing.downloads.remote.block_dangerous", false);
+user_pref("browser.safebrowsing.downloads.remote.block_dangerous_host", false);
+user_pref("browser.safebrowsing.downloads.remote.block_potentially_unwanted", false);
+user_pref("browser.safebrowsing.downloads.remote.block_uncommon", false);
 // 7.7 Режим семейной безопасности в Windows 8.1
 // Возможные значения 0=Режим не проверяется, сертификат не импортируется
 // 1=Браузер видит данный режим, но сертификат не импортируется
