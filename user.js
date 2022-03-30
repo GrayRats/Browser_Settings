@@ -280,7 +280,7 @@ user_pref("dom.image-lazy-loading.enabled", true);
 // Включать (true) имеет смысл только если используете дисковый кэш на SSD !СЕТИ
 user_pref("network.http.rcwn.enabled", true);    
 // выгрузку Firefox в файл подкачки, пока, собственно, браузер свернут
-user_pref("config.trim_on_minimize", "false");
+user_pref("config.trim_on_minimize", true);
 // 4.11 Включить кэш в оперативной памяти
 user_pref("browser.cache.memory.enable", true);
 //
