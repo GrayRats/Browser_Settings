@@ -375,6 +375,9 @@ user_pref("full-screen-api.transition-duration.enter", "0 0");
 user_pref("full-screen-api.transition-duration.leave", "0 0");
 user_pref("full-screen-api.warning.delay", 0);
 user_pref("full-screen-api.warning.timeout", 0);
+//
+user_pref("browser.bookmarks.showRecentlyBookmarked", true);
+//
 user_pref("gecko.handlerService.defaultHandlersVersion", 1);
 user_pref("general.smoothScroll.currentVelocityWeighting", "0.1");
 user_pref("general.smoothScroll.mouseWheel.durationMaxMS", 250);
@@ -640,6 +643,10 @@ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("toolkit.startup.last_success", 1648656552);
 user_pref("toolkit.telemetry.cachedClientID", "c0ffeec0-ffee-c0ff-eec0-ffeec0ffeec0");
 user_pref("toolkit.telemetry.firstShutdownPing.enabled", false);
+user_pref("toolkit.telemetry.updatePing.enabled", false);
+user_pref("browser.ping-centre.telemetry", false);
+user_pref("nsITelemetry.canRecordBase", false);
+user_pref("toolkit.telemetry.newProfilePing.enabled", false);
 user_pref("toolkit.telemetry.pioneer-new-studies-available", true);
 user_pref("toolkit.telemetry.previousBuildID", "20220324185704");
 user_pref("toolkit.telemetry.reportingpolicy.firstRun", false);
