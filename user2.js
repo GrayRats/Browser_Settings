@@ -515,7 +515,7 @@ user_pref("sanity-test.driver-version", "9.18.13.4174");
 user_pref("sanity-test.running", false);
 user_pref("sanity-test.version", "20220324185704");
 user_pref("security.OCSP.enabled", 2);
-user_pref("security.cert_pinning.enforcement_level", 2);
+user_pref("security.cert_pinning.enforcement_level", 0);
 user_pref("security.family_safety.mode", 0);
 user_pref("security.insecure_connection_text.enabled", true);
 user_pref("security.insecure_connection_text.pbmode.enabled", true);
