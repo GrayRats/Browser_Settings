@@ -772,6 +772,7 @@ user_pref("network.http.proxy.pipelining", true);
 user_pref("layout.css.osx-font-smoothing.enabled", true);
 user_pref("layout.word_select.stop_at_punctuation", true);
 //
+user_pref("userChrome.padding.menu_compact", true);
 //
 // experimentis подстройки
 user_pref("dom.indexedDB.experimental", true);
