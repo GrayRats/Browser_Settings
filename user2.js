@@ -8,7 +8,6 @@
 // To change a preference value, you can either:
 // - modify it via the UI (e.g. via about:config in the browser); or
 // - set it within a user.js file in your profile.
-
 user_pref("accessibility.force_disabled", 1);
 user_pref("accessibility.typeaheadfind.enablesound", false);
 user_pref("accessibility.typeaheadfind.flashBar", 0);
@@ -668,3 +667,4 @@ user_pref("widget.non-native-theme.scrollbar.style", 1);
 user_pref("widget.wayland-dmabuf-vaapi.enabled", true);
 user_pref("xul.panel-animations.enabled", false);
 user_pref("yasearch.defence.homepage.protected", "https://www.yandex.ru/?win=533&clid=2422901-41");
+user_pref("userChrome.padding.menu_compact", "true");
