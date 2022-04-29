@@ -379,9 +379,9 @@ user_pref("full-screen-api.warning.timeout", 0);
 user_pref("browser.bookmarks.showRecentlyBookmarked", true);
 //
 user_pref("gecko.handlerService.defaultHandlersVersion", 1);
-user_pref("general.smoothScroll.currentVelocityWeighting", "0.1");
-user_pref("general.smoothScroll.mouseWheel.durationMaxMS", 250);
-user_pref("general.smoothScroll.mouseWheel.durationMinMS", 125);
+user_pref("general.smoothScroll.currentVelocityWeighting", "0.15");
+user_pref("general.smoothScroll.mouseWheel.durationMaxMS", 200);
+user_pref("general.smoothScroll.mouseWheel.durationMinMS", 80);
 user_pref("general.smoothScroll.stopDecelerationWeighting", "0.7");
 user_pref("gfx-shader-check.build-version", "20220324185704");
 user_pref("gfx-shader-check.device-id", "0x0610");
