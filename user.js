@@ -126,12 +126,23 @@ user_pref("browser.sessionstore.restore_on_demand", true);
 // 1.33 Возможность пожаловаться на расширение при его удалении
 user_pref("extensions.abuseReport.enabled", false);
 // 1.34 Настройки плавной прокрутки страниц
-user_pref("general.smoothScroll", true);
-user_pref("general.smoothScroll.currentVelocityWeighting", "0.1");
-user_pref("general.smoothScroll.mouseWheel.durationMaxMS", 250);
-user_pref("general.smoothScroll.mouseWheel.durationMinMS", 125);
+user_pref("font.name.serif.x-central-euro", "PT Serif");
+user_pref("font.name.serif.x-cyrillic", "PT Astra Sans");
+user_pref("font.name.serif.x-unicode", "DejaVu Serif");
+user_pref("font.name.serif.x-user-def", "PT Serif");
+user_pref("font.name.serif.x-western", "PT Astra Sans");
+user_pref("full-screen-api.transition-duration.enter", "0 0");
+user_pref("full-screen-api.transition-duration.leave", "0 0");
+user_pref("full-screen-api.warning.delay", 0);
+user_pref("full-screen-api.warning.timeout", 0);
+//
+user_pref("browser.bookmarks.showRecentlyBookmarked", true);
+//
+user_pref("gecko.handlerService.defaultHandlersVersion", 1);
+user_pref("general.smoothScroll.currentVelocityWeighting", "0.15");
+user_pref("general.smoothScroll.mouseWheel.durationMaxMS", 200);
+user_pref("general.smoothScroll.mouseWheel.durationMinMS", 80);
 user_pref("general.smoothScroll.stopDecelerationWeighting", "0.7");
-user_pref("mousewheel.min_line_scroll_amount", 25);
 //
 // 1.35 Разрешить скриптам и сайтам изменять контекстное меню  вызываемое по правому клику мыши
 user_pref("dom.event.contextmenu.enabled", true);
