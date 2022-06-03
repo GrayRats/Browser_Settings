@@ -1,4 +1,5 @@
 lockPref("browser.preferences.experimental", true);
+lockPref("extensions.experiments.enabled", true);
 //
 user_pref("devtools.debugger.remote-enabled", false);
 user_pref("accessibility.force_disabled", true); // Функция запрещает службам поддержки доступности доступ к вашему браузеру. 
@@ -18,7 +19,7 @@ user_pref("browser.tabs.tabMinWidth", 35);
 user_pref("browser.tabs.warnOnClose", false);
 //
 // 1.8 Предупреждать при закрытии всех вкладок кроме активной
-user_pref("browser.tabs.warnOnCloseOtherTabs", false);
+user_pref("browser.tabs.warnOnCloseOtherTabs", true);
 // 1.9 Настройки анимации
 user_pref("toolkit.cosmeticAnimations.enabled", true);  //Отключение  части анимац интерфейса
 user_pref("ui.prefersReducedMotion", 0);  // Поставить на 1 отключить всю анимацию CSS
@@ -27,7 +28,7 @@ user_pref("browser.stopReloadAnimation.enabled", false);
 // 1.9.3 Анимация плавного движения верхней рамки за видимую часть экрана при переходе в полноэкранный режим.
 user_pref("browser.fullscreen.animate", false);
 // 1.9.4 Отключает притормаживающую на окнах с многими вкладками анимацию открытия и закрытия табов.
-user_pref("browser.tabs.animate", false);
+lockPref("browser.tabs.animate", false);
 // 1.9.6 Плавное открытие и сворачивание окошек главного меню и просмотра истории
 user_pref("xul.panel-animations.enabled", false);
 // 1.9.8 Задержка перед отрисовкой меню
@@ -136,7 +137,7 @@ user_pref("full-screen-api.transition-duration.leave", "0 0");
 user_pref("full-screen-api.warning.delay", 0);
 user_pref("full-screen-api.warning.timeout", 0);
 //
-user_pref("browser.bookmarks.showRecentlyBookmarked", true);
+lockPref("browser.bookmarks.showRecentlyBookmarked", true);
 //
 user_pref("gecko.handlerService.defaultHandlersVersion", 1);
 user_pref("general.smoothScroll.currentVelocityWeighting", "0.15");
@@ -329,7 +330,7 @@ user_pref("network.trr.custom_uri", "https://dns.comss.one/dns-query");
 //
 user_pref("network.cookie.same-site.enabled", true);
 user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
-user_pref("webextensions.tests", false);
+lockPref("webextensions.tests", false);
 user_pref("extensions.getAddons.showPane", false);
 // 5.3 Использовать DOH без исключений, в том числе при активном VPN и подключении через Proxy
 user_pref("network.dns.skipTRR-when-parental-control-enabled", false);
@@ -371,7 +372,7 @@ user_pref("network.trr.send_user-agent_headers", false);
 // http://kb.mozillazine.org/Network.dns.disablePrefetch
 // Установите оба значения true если желаете отключить данную функцию
 // В значении false браузер будет заранее опрашивать DNS сервер
-user_pref("network.dns.disablePrefetch", false);
+lockPref("network.dns.disablePrefetch", false);
 user_pref("network.dns.disablePrefetchFromHTTPS", false);
 //
 user_pref("dom.disable_window_open_feature.close", true);
@@ -505,7 +506,7 @@ user_pref("privacy.userContext.ui.enabled", true);
 user_pref("privacy.usercontext.about_newtab_segregation.enabled", true);
 ////
 user_pref("pdfjs.enableScripting", false);
-user_pref("dom.battery.enabled", false);
+lockPref("dom.battery.enabled", false);
 // Отключает запоминание уровня зума для сайта 
 user_pref("privacy.resistFingerprinting", true);
 user_pref("privacy.resistFingerprinting.autoDeclineNoUserInputCanvasPrompts", false);
@@ -568,7 +569,7 @@ user_pref("security.tls.enable_0rtt_data", false);
 // Функция отключена, так как ранее Firefox имел уязвимость связанную с данной настройки,
 // которая потенциально может быть до сих пор актуальна
 // https://bugzilla.mozilla.org/show_bug.cgi?id=919877
-user_pref("security.ssl.enable_false_start", false);
+lockPref("security.ssl.enable_false_start", false);
 
 // 7.14 Уведомление о том, что сервер использует устаревший алгоритм шифрования
 // (!) Данная настройка является страховкой на случай отключения (7.1)
@@ -601,7 +602,7 @@ user_pref("breakpad.reportURL", "false");
 user_pref("browser.tabs.crashReporting.sendReport", false); // [FF44+]
 user_pref("dom.push.enabled", false);
 user_pref("app.normandy.enabled", false);
-user_pref("app.normandy.api_url", "blank");
+lockPref("app.normandy.api_url", "blank");
 //
 user_pref("browser.safebrowsing.enabled", false);
 user_pref("browser.safebrowsing.downloads.enabled", false);
@@ -714,7 +715,7 @@ user_pref("gfx.canvas.azure.backends", "direct2d1.1,skia,cairo");
 //
 //
 user_pref("media.autoplay.enabled", false);
-user_pref("media.av1.enabled", true);
+lockPref("media.av1.enabled", true);
 // GTK
 user_pref("widget.chrome.allow-gtk-dark-theme", true);
 user_pref("widget.content.allow-gtk-dark-theme", true);
