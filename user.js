@@ -151,6 +151,7 @@ user_pref("apz.drag.touch.enabled", false);
 user_pref("apz.one_touch_pinch.enabled", false);
 user_pref("ui.osk.enabled", false);
 user_pref("ui.osk.detect_physical_keyboard", false);
+user_pref("widget.non-native-theme.scrollbar.style", 1);
 //
 // 1.35 Разрешить скриптам и сайтам изменять контекстное меню  вызываемое по правому клику мыши
 user_pref("dom.event.contextmenu.enabled", true);
@@ -345,6 +346,8 @@ user_pref("network.trr.enable_when_nrpt_detected", true);
 user_pref("network.trr.enable_when_proxy_detected", true);
 user_pref("network.trr.enable_when_vpn_detected", true);
 user_pref("network.proxy.socks_remote_dns", true);
+user_pref("network.proxy.type", 2);
+user_pref("network.proxy.autoconfig_url", "https://antizapret.prostovpn.org/proxy.pac");
 //
 // 5.4 Отключить поддержку соединения с DNS через IPv6 
 //user_pref("network.dns.disableIPv6", true);
@@ -367,7 +370,7 @@ user_pref("network.dns.use_https_rr_as_altsvc", true);
 // 5.7 Вы можете установить IP адрес DNS сервера установленного в (5.2) для того, чтобы браузер не искал его
 // у DNS сервера установленного в ОС по-умолчанию
 // Обычно в данной настройке нет необходимости
-// user_pref("network.trr.bootstrapAddress", "");
+// user_pref("network.trr.bootstrapAddress", "1.1.1.1");
 //
 // 5.8 Частота с которой Firefox повторно обращается к DOH серверу для обновления данных
 user_pref("network.trr.blacklist-duration", 60);
@@ -400,7 +403,8 @@ user_pref("browser.safebrowsing.downloads.remote.url", "");
 user_pref("browser.safebrowsing.downloads.enabled", false);
 user_pref("security.remote_settings.intermediates.parallel_downloads", 8);
 user_pref("browser.safebrowsing.downloads.remote.enabled", false);
-user_pref("", false);
+user_pref("browser.selfsupport.enabled", false);
+user_pref("browser.selfsupport.url", "");
 user_pref("browser.safebrowsing.downloads.remote.block_dangerous", false);
 user_pref("browser.safebrowsing.downloads.remote.block_dangerous_host", false);
 user_pref("browser.safebrowsing.downloads.remote.block_potentially_unwanted", false);
