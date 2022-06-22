@@ -145,6 +145,13 @@ user_pref("general.smoothScroll.mouseWheel.durationMaxMS", 200);
 user_pref("general.smoothScroll.mouseWheel.durationMinMS", 80);
 user_pref("general.smoothScroll.stopDecelerationWeighting", "0.7");
 //
+user_pref("apz.overscroll.enabled", true);
+user_pref("apz.allow_double_tap_zooming", false);
+user_pref("apz.drag.touch.enabled", false);
+user_pref("apz.one_touch_pinch.enabled", false);
+user_pref("ui.osk.enabled", false);
+user_pref("ui.osk.detect_physical_keyboard", false);
+//
 // 1.35 Разрешить скриптам и сайтам изменять контекстное меню  вызываемое по правому клику мыши
 user_pref("dom.event.contextmenu.enabled", true);
 //
