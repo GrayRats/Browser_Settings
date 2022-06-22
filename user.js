@@ -325,7 +325,7 @@ user_pref("network.trr.mode", 3);
 
 // По-умолчанию настроен Comss.one DNS - https://www.comss.ru/page.php?id=7315
 user_pref("network.trr.uri", "https://dns.comss.one/dns-query");
-user_pref("network.trr.custom_uri", "https://dns.comss.one/dns-query");
+user_pref("network.trr.custom_uri", "https://dns.east.comss.one/dns-query");
 
 // Вариативно - https://controld.com/ от Winscribe (сервера по всему миру, фильтрация вирусов, рекламы и трекинга)
 //user_pref("network.trr.uri", "https://freedns.controld.com/p2");
