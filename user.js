@@ -424,7 +424,7 @@ user_pref("security.insecure_connection_icon.enabled", true);
 user_pref("security.insecure_connection_text.enabled", true);
 user_pref("security.insecure_connection_text.pbmode.enabled", true);
 //
-user_pref("gfx.font_rendering.opentype_svg.enabled", false);
+user_pref("gfx.font_rendering.opentype_svg.enabled", true);
 user_pref("gfx.font_rendering.graphite.enabled", false);
 //
 // 7.1 Блокировка подключения к хостам использующим устаревшие и потенциально уязвимые протоколы шифрования SSL/TLS
