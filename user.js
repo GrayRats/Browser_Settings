@@ -507,10 +507,15 @@ lockPref("browser.contentblocking.report.social.url", "");
 lockPref("browser.contentblocking.report.tracker.url", "");
 lockPref("browser.contentblocking.reportBreakage.url", "");
 ///
-lockPref("services.sync.prefs.sync.privacy.trackingprotection.cryptomining.enabled", false);
+lockPref("services.sync.prefs.sync.privacy.trackingprotection.cryptomining.enabled", true);
 lockPref("services.sync.prefs.sync.privacy.trackingprotection.enabled", false);
 lockPref("services.sync.prefs.sync.privacy.trackingprotection.fingerprinting.enabled", false);
-lockPref("services.sync.prefs.sync.privacy.trackingprotection.pbmode.enabled", false);
+/////
+lockPref("privacy.trackingprotection.pbmode.enabled", true);
+lockPref("privacy.query_stripping.enabled.pbmode", true);
+lockPref("privacy.query_stripping.enabled", true);
+lockPref("privacy.query_stripping.redirect", true);
+lockPref("services.sync.prefs.sync.privacy.trackingprotection.pbmode.enabled", true);
 ////
 user_pref("privacy.userContext.ui.enabled", true);
 // включить частный контейнер для загрузки миниатюр [FF51 +]
