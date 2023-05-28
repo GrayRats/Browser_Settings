@@ -462,7 +462,7 @@ user_pref("security.tls.enable_delegated_credentials", true);
 // 7.9 Использовать CRLite для более быстрой проверки надежности удостоверяющих центров
 // https://blog.mozilla.org/security/2020/01/09/crlite-part-2-end-to-end-design/
 user_pref("security.remote_settings.crlite_filters.enabled", true);
-user_pref("security.pki.crlite_mode", 2);
+user_pref("security.pki.crlite_mode", 3);
 // Безопасность.
 // ВКЛЮЧИТЬ TrackingProtection
 user_pref("privacy.trackingprotection.enabled", true);
@@ -482,18 +482,18 @@ user_pref("toolkit.telemetry.shutdownPingSender.enabled", false);
 user_pref("toolkit.telemetry.firstShutdownPing.enabled", false);
 user_pref("toolkit.telemetry.debugSlowSql ", false);
 user_pref("browser.ping-centre.telemetry", false);
-user_pref("browser.send_pings", false);
+user_pref("browser.send_pings", true);
 user_pref("browser.send_pings.require_same_host", false);
 user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
 // Позволяет сайту следить за действиями пользователя, когда он копирует выделенный текст.копирование текста из редактора).
-user_pref("dom.event.clipboardevents.enabled", true); // НеРекомендуется
-// dom performance Отключаем передачу браузером информации о времени начала и окончания загрузки страницы pornhub.com (авторизация).
+user_pref("dom.event.clipboardevents.enabled", false); // НеРекомендуется
+// dom performance Отключаем передачу браузером информации о времени начала и окончания загрузки страницы pornhub.com (авторизация). // True - передавать
 user_pref("dom.enable_performance", "true");
 lockPref("full-screen-api.warning.timeout", "false");
 /// Отключить трекинг trackingprotection
 lockPref("extensions.htmlaboutaddons.discover.enabled", "false");
-lockPref("browser.trackingprotection.gethashURL", "");
-lockPref("browser.trackingprotection.updateURL", "");
+//lockPref("browser.trackingprotection.gethashURL", "");
+// lockPref("browser.trackingprotection.updateURL", "");
 lockPref("browser.contentblocking.report.cookie.url", "");
 lockPref("browser.contentblocking.report.cryptominer.url", "");
 lockPref("browser.contentblocking.report.endpoint_url", "");
@@ -520,8 +520,8 @@ user_pref("privacy.userContext.ui.enabled", true);
 // включить частный контейнер для загрузки миниатюр [FF51 +]
 user_pref("privacy.usercontext.about_newtab_segregation.enabled", true);
 ////
-user_pref("pdfjs.enableScripting", false);
-lockPref("dom.battery.enabled", false);
+user_pref("pdfjs.enableScripting", true);
+lockPref("dom.battery.enabled", true);
 // Отключает запоминание уровня зума для сайта 
 user_pref("privacy.resistFingerprinting", true);
 user_pref("privacy.resistFingerprinting.autoDeclineNoUserInputCanvasPrompts", false);
@@ -542,11 +542,11 @@ user_pref("network.cookie.cookieBehavior", 4);
 // но для максимальной безопасности я рекомендую его отключить (установить значение false)
 user_pref("security.ssl3.rsa_des_ede3_sha", true);
 // 7.12.2 Отключение некоторых устаревших алгоритмов
-user_pref("security.ssl3.ecdhe_ecdsa_aes_256_sha", false);
-user_pref("security.ssl3.ecdhe_ecdsa_aes_128_sha", false);
+user_pref("security.ssl3.ecdhe_ecdsa_aes_256_sha", true);
+user_pref("security.ssl3.ecdhe_ecdsa_aes_128_sha", true);
 user_pref("security.ssl3.ecdhe_rsa_aes_128_sha", false);
-user_pref("security.ssl3.ecdhe_rsa_aes_256_sha", false);
-user_pref("security.ssl3.rsa_aes_128_sha", false); // no PFS
+user_pref("security.ssl3.ecdhe_rsa_aes_256_sha", true);
+user_pref("security.ssl3.rsa_aes_128_sha", true); // no PFS
 // Шифр ниже до сих пор активно используется в рунете, например, сайтом nnmclub
 // но для максимальной безопасности я рекомендую его отключить (установить значение false)
 user_pref("security.ssl3.rsa_aes_256_sha", true); // no PFS
@@ -556,20 +556,20 @@ user_pref("security.ssl3.rsa_aes_256_sha", true); // no PFS
 // таким образом рекомендую данный алгоритм отключить, но оставлю его включенным для основной массы пользователей
 user_pref("security.ssl3.ecdhe_rsa_aes_128_gcm_sha256", true);
 // 7.12.3 Отключение алгоритма 3DES с размером ключа < 128
-user_pref("security.ssl3.dhe_dss_des_ede3_sha", false);
-user_pref("security.ssl3.dhe_rsa_des_ede3_sha", false);
-user_pref("security.ssl3.ecdh_ecdsa_des_ede3_sha", false);
-user_pref("security.ssl3.ecdh_rsa_des_ede3_sha", false);
-user_pref("security.ssl3.ecdhe_ecdsa_des_ede3_sha", false);
-user_pref("security.ssl3.ecdhe_rsa_des_ede3_sha", false);
-user_pref("security.ssl3.rsa_fips_des_ede3_sha", false);
+user_pref("security.ssl3.dhe_dss_des_ede3_sha", true);
+user_pref("security.ssl3.dhe_rsa_des_ede3_sha", true);
+user_pref("security.ssl3.ecdh_ecdsa_des_ede3_sha", true);
+user_pref("security.ssl3.ecdh_rsa_des_ede3_sha", true);
+user_pref("security.ssl3.ecdhe_ecdsa_des_ede3_sha", true);
+user_pref("security.ssl3.ecdhe_rsa_des_ede3_sha", true);
+user_pref("security.ssl3.rsa_fips_des_ede3_sha", true);
 // 7.12.4 Отключение поддержки шифрования с пустым ключом
-user_pref("security.ssl3.rsa_null_sha", false);
-user_pref("security.ssl3.rsa_null_md5", false);
-user_pref("security.ssl3.ecdhe_rsa_null_sha", false);
-user_pref("security.ssl3.ecdhe_ecdsa_null_sha", false);
-user_pref("security.ssl3.ecdh_rsa_null_sha", false);
-user_pref("security.ssl3.ecdh_ecdsa_null_sha", false);
+user_pref("security.ssl3.rsa_null_sha", true);
+user_pref("security.ssl3.rsa_null_md5", true);
+user_pref("security.ssl3.ecdhe_rsa_null_sha", true);
+user_pref("security.ssl3.ecdhe_ecdsa_null_sha", true);
+user_pref("security.ssl3.ecdh_rsa_null_sha", true);
+user_pref("security.ssl3.ecdh_ecdsa_null_sha", true);
 // 1.62 Отключает текстовое сообщения о проигрываемом медиа во второй строке ниже названия вкладки
 //
 user_pref("browser.tabs.secondaryTextUnsupportedLocales", "ar,bn,bo,ckb,fa,gu,he,hi,ja,km,kn,ko,lo,mr,my,ne,pa,si,ta,te,th,ur,zh,ru")
@@ -578,17 +578,17 @@ user_pref("browser.tabs.secondaryTextUnsupportedLocales", "ar,bn,bo,ckb,fa,gu,he
 // что может быть небезопасно в исключительных ситуациях
 // (!) Данная настройка незначительно увеличивает время соединения с https сайтами
 // https://blog.cloudflare.com/tls-1-3-overview-and-q-and-a/
-user_pref("security.tls.enable_0rtt_data", false);
+user_pref("security.tls.enable_0rtt_data", true);
 // 7.13.1  Отключение технологии, ускоряющей на 30% установку SSL соединения за счет
 // объединения ряда запросов при согласовании зашифрованного канала
 // Функция отключена, так как ранее Firefox имел уязвимость связанную с данной настройки,
 // которая потенциально может быть до сих пор актуальна
 // https://bugzilla.mozilla.org/show_bug.cgi?id=919877
-lockPref("security.ssl.enable_false_start", false);
+lockPref("security.ssl.enable_false_start", true);
 
 // 7.14 Уведомление о том, что сервер использует устаревший алгоритм шифрования
 // (!) Данная настройка является страховкой на случай отключения (7.1)
-user_pref("security.ssl.treat_unsafe_negotiation_as_broken", true);
+user_pref("security.ssl.treat_unsafe_negotiation_as_broken", false);
 
 // 7.35 Задержка для некоторых диалогов подтверждения, например, установки расширений
 // (!) Не устанавливайте значение 0, чтобы избежать случайных действий
@@ -605,13 +605,13 @@ user_pref("network.security.ports.banned", "4444,9050,9051,69,137,161,1719,1720,
 
 user_pref("privacy.window.name.update.enabled", true);
 user_pref("browser.urlbar.filter.javascript", true);
-// Отключение может незначительно повысить производительность браузера, но только на ваш страх и риск
-user_pref("javascript.options.spectre.index_masking", false);
-user_pref("javascript.options.spectre.jit_to_C++_calls", false);
-user_pref("javascript.options.spectre.object_mitigations.barriers", false);
-user_pref("javascript.options.spectre.object_mitigations.misc", false);
-user_pref("javascript.options.spectre.string_mitigations", false);
-user_pref("javascript.options.spectre.value_masking", false);
+// Отключение может незначительно повысить производительность браузера, но только на ваш страх и риск , можете отключить false эти функции.
+user_pref("javascript.options.spectre.index_masking", true);
+user_pref("javascript.options.spectre.jit_to_C++_calls", true);
+user_pref("javascript.options.spectre.object_mitigations.barriers", true);
+user_pref("javascript.options.spectre.object_mitigations.misc", true);
+user_pref("javascript.options.spectre.string_mitigations", true);
+user_pref("javascript.options.spectre.value_masking", true);
 //
 user_pref("breakpad.reportURL", "false");
 user_pref("browser.tabs.crashReporting.sendReport", false); // [FF44+]
@@ -650,7 +650,7 @@ user_pref("layout.css.devPixelsPerPx", "1.00"); // Масштабировани�
 user_pref( "browser.tabs.allowTabDetach", true);
 // главный переключатель нового дизайна. 
 // Различные анимированные украшательства браузера.Например, при закрытии центральной вкладки, правая плавно подползает к левой.
-user_pref("toolkit.cosmeticAnimations.enabled", true);
+// user_pref("toolkit.cosmeticAnimations.enabled", true);
 //
 user_pref("browser.proton.doorhangers.enabled", true);
 user_pref("browser.proton.infobars.enabled", true);
@@ -795,6 +795,6 @@ user_pref("dom.indexedDB.experimental", true);
 user_pref("media.mediasource.experimental.enabled", true);
 //MEDIA/AUDIO
 user_pref("dom.media.autoplay.autoplay-policy-api", true);
-user_pref("media.wmf.low-latency.enabled", false);
+user_pref("media.wmf.low-latency.enabled", true);
 //
 user_pref("network.IDN_show_punycode", false); // показать punycode (из-за последней подделки URL-адреса conerns) 
