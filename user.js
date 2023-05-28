@@ -83,8 +83,8 @@ user_pref("datareporting.healthreport.uploadEnabled", false);
 user_pref("datareporting.policy.dataSubmissionEnabled", false);
 user_pref("datareporting.policy.firstRunURL", "");
 // для мобильной версии, но иногда в ноутбуках тоже есть какие-то сенсорЫ
-user_pref("device.sensors.enabled", false);
-user_pref("device.sensors.motion.enabled", false);
+user_pref("device.sensors.enabled", true);
+user_pref("device.sensors.motion.enabled", true);
 user_pref("device.sensors.orientation.enabled", false);
 // 1.23 Обновленный режим печати
 user_pref("print.tab_modal.enabled", true);
