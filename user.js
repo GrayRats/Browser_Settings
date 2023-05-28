@@ -212,7 +212,7 @@ user_pref("browser.compactmode.show", true);
 /////======
 // 1.48 Количество строк подсказок в адресной строке
 // Значение -1 полностью отключает подсказки
-user_pref("browser.urlbar.maxRichResults", 15);
+user_pref("browser.urlbar.maxRichResults", 12);
 // 1.52 Хранение настроек масштабирования веб-страниц
 // Значения true - для каждого сайта свой масштаб false - для всех сайтов одинаковый масштаб
 user_pref("browser.zoom.siteSpecific", true);
@@ -338,7 +338,6 @@ user_pref("network.trr.custom_uri", "https://dns.east.comss.one/dns-query");
 //
 user_pref("network.cookie.same-site.enabled", true);
 user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
-lockPref("webextensions.tests", false);
 user_pref("extensions.getAddons.showPane", false);
 // 5.3 Использовать DOH без исключений, в том числе при активном VPN и подключении через Proxy
 user_pref("network.dns.skipTRR-when-parental-control-enabled", false);
@@ -382,7 +381,7 @@ user_pref("network.trr.send_user-agent_headers", false);
 // http://kb.mozillazine.org/Network.dns.disablePrefetch
 // Установите оба значения true если желаете отключить данную функцию
 // В значении false браузер будет заранее опрашивать DNS сервер
-lockPref("network.dns.disablePrefetch", false);
+user_pref("network.dns.disablePrefetch", false);
 user_pref("network.dns.disablePrefetchFromHTTPS", false);
 //
 user_pref("dom.disable_window_open_feature.close", true);
@@ -418,7 +417,7 @@ user_pref("security.family_safety.mode", 0);
 // 7.8 Проверка сертификатов на надёжности подписавшего их удостоверяющего центра
 // https://wiki.mozilla.org/SecurityEngineering/Public_Key_Pinning
 // Возможные значения 0=Отключено 1=Разрешение для локально установленных (например антивирусом), 2=Строгая проверка
-user_pref("security.cert_pinning.enforcement_level", 2);
+user_pref("security.cert_pinning.enforcement_level", 1);
 // 7.18 Отображать иконку и текст об потенциальной опасности незащищенных шифрованием сайтов
 user_pref("security.insecure_connection_icon.enabled", true);
 user_pref("security.insecure_connection_text.enabled", true);
@@ -429,10 +428,10 @@ user_pref("gfx.font_rendering.graphite.enabled", false);
 //
 // 7.1 Блокировка подключения к хостам использующим устаревшие и потенциально уязвимые протоколы шифрования SSL/TLS
 // https://wiki.mozilla.org/Security:Renegotiation#security.ssl.require_safe_negotiation
-user_pref("security.ssl.require_safe_negotiation", true);  Instagram, Mega.nz, многие другие.
+user_pref("security.ssl.require_safe_negotiation", false);  Instagram, Mega.nz, многие другие.
 
 // 7.2 Запрет на использование устаревших и уязвимых TLS 1.0 и 1.1
-user_pref("security.tls.version.enable-deprecated", false);
+user_pref("security.tls.version.enable-deprecated", true);
 user_pref("security.tls.version.max", 4;
 user_pref("security.tls.version.min", 3);
 user_pref("tcp.tcp_fastopen_enable", true);
@@ -443,7 +442,7 @@ user_pref("security.ssl.enable_ocsp_stapling", true);
 // 7.4 Проверка валидности OCSP через обращение к удостоверяющему центру
 // Значения: 0=Отключено, 1=Включено (по-умолчанию), 2=Только для сайтов с EV сертификатом
 // (!)Данная настройка снижает вашу анонимность, но необходима для безопасности
-user_pref("security.OCSP.enabled", 2);
+// user_pref("security.OCSP.enabled", 2);
 // 2705 : отключить файлы cookie HTTP-сайтов с помощью директивы "secure" [FF52 +]
 user_pref ("network.cookie.leave-secure-alone", true);
 // 7.5 Сайты не будут загружаться без получения подтверждения через OCSP
@@ -456,7 +455,7 @@ user_pref ("network.cookie.leave-secure-alone", true);
 // Возможные значения 0=Все SHA1 сертификаты разрешены 1=Все SHA1 заблокированы
 // 3=Разрешены только локальные сертификаты, например, установленные антивирусами
 // 4=Разрешены локальные + подписанные в 2015 году или ранее
-user_pref("security.pki.sha1_enforcement_level", 1);
+user_pref("security.pki.sha1_enforcement_level", 4);
 user_pref("security.tls.enable_delegated_credentials", true);
 
 
