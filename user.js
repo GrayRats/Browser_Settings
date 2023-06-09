@@ -126,12 +126,21 @@ user_pref("browser.sessionstore.restore_on_demand", true);
 //
 // 1.33 Возможность пожаловаться на расширение при его удалении
 user_pref("extensions.abuseReport.enabled", false);
-// 1.34 Настройки плавной прокрутки страниц
+/// Шрифты 
+user_pref("font.name.sans-serif.x-cyrillic", "PT Sans Expert");
+user_pref("font.name.sans-serif.x-central-euro", "PT Sans");
+user_pref("font.name.sans-serif.x-western", "PT Sans Expert");
+//
 user_pref("font.name.serif.x-central-euro", "PT Serif");
-user_pref("font.name.serif.x-cyrillic", "PT Astra Sans");
-user_pref("font.name.serif.x-unicode", "DejaVu Serif");
+user_pref("font.name.monospace.x-central-euro", "PT Mono");
+user_pref("font.name.monospace.x-baltic", "PT Mono);
+user_pref("font.name.serif.x-cyrillic", "PT Serif");
+user_pref("font.name.serif.x-unicode", "PT Mono");
 user_pref("font.name.serif.x-user-def", "PT Serif");
-user_pref("font.name.serif.x-western", "PT Astra Sans");
+user_pref("font.name.serif.x-western", "PT Sans Expert");
+user_pref("font.name.monospace.x-user-def", "PT Mono");
+//// 1.34 Настройки плавной прокрутки страниц
+user_pref("font.default.x-user-def", "sans-serif");
 user_pref("full-screen-api.transition-duration.enter", "0 0");
 user_pref("full-screen-api.transition-duration.leave", "0 0");
 user_pref("full-screen-api.warning.delay", 0);
