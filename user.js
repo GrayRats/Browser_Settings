@@ -127,18 +127,36 @@ user_pref("browser.sessionstore.restore_on_demand", true);
 // 1.33 Возможность пожаловаться на расширение при его удалении
 user_pref("extensions.abuseReport.enabled", false);
 /// Шрифты 
-user_pref("font.name.sans-serif.x-cyrillic", "PT Sans Expert");
-user_pref("font.name.sans-serif.x-central-euro", "PT Sans");
-user_pref("font.name.sans-serif.x-western", "PT Sans Expert");
+user_pref("font.default.el", "sans-serif");
+user_pref("font.default.x-baltic", "sans-serif");
+user_pref("font.default.x-central-euro", "sans-serif");
+user_pref("font.default.x-cyrillic", "sans-serif");
+user_pref("font.default.x-unicode", "sans-serif");
+user_pref("font.default.x-user-def", "sans-serif");
+user_pref("font.default.x-western", "sans-serif");
+user_pref("font.internaluseonly.changed", true);
+user_pref("font.language.group", "x-cyrillic");
 //
-user_pref("font.name.serif.x-central-euro", "PT Serif");
+user_pref("font.minimum-size.x-cyrillic", 9);
+user_pref("font.minimum-size.x-western", 10);
+//
+user_pref("font.name.monospace.x-baltic", "PT Mono");
 user_pref("font.name.monospace.x-central-euro", "PT Mono");
-user_pref("font.name.monospace.x-baltic", "PT Mono);
-user_pref("font.name.serif.x-cyrillic", "PT Serif");
-user_pref("font.name.serif.x-unicode", "PT Mono");
-user_pref("font.name.serif.x-user-def", "PT Serif");
-user_pref("font.name.serif.x-western", "PT Sans Expert");
+user_pref("font.name.monospace.x-cyrillic", "PT Mono");
+user_pref("font.name.monospace.x-unicode", "PT Mono");
 user_pref("font.name.monospace.x-user-def", "PT Mono");
+user_pref("font.name.monospace.x-western", "PT Mono");
+user_pref("font.name.sans-serif.x-central-euro", "PT Sans");
+user_pref("font.name.sans-serif.x-cyrillic", "PT Sans");
+user_pref("font.name.sans-serif.x-unicode", "PT Mono");
+user_pref("font.name.sans-serif.x-user-def", "PT Sans");
+user_pref("font.name.sans-serif.x-western", "PT Sans Expert");
+user_pref("font.name.sans.x-cyrillic", "PT Sans");
+user_pref("font.name.serif.x-central-euro", "PT Serif");
+user_pref("font.name.serif.x-cyrillic", "PT Sans");
+user_pref("font.name.serif.x-unicode", "PT Mono");
+user_pref("font.name.serif.x-user-def", "PT Serif Expert");
+user_pref("font.name.serif.x-western", "PT Serif Expert");
 //// 1.34 Настройки плавной прокрутки страниц
 user_pref("font.default.x-user-def", "sans-serif");
 user_pref("full-screen-api.transition-duration.enter", "0 0");
@@ -259,7 +277,7 @@ user_pref("browser.urlbar.suggest.calculator", true);
 user_pref("webgl.angle.force-warp", true);
 user_pref("webgl.msaa-force", true);
 // 2.2.4 Выполнение отрисовки некоторых отдельных элементов страницы через WebGL в отдельном потоке
-user_pref("gfx.offscreencanvas.enabled", true);
+user_pref("gfx.offscreencanvas.enabled", false);
 // Firefox может автоматически определять сколько ядер или потоков имеет процессор в компьютере.
 user_pref("dom.maxHardwareConcurrency", 12);
 // 2.6 Рендер PDF средствами видеокарты
@@ -440,6 +458,7 @@ user_pref("gfx.font_rendering.graphite.enabled", false);
 user_pref("security.ssl.require_safe_negotiation", false);  Instagram, Mega.nz, многие другие.
 
 // 7.2 Запрет на использование устаревших и уязвимых TLS 1.0 и 1.1
+//
 user_pref("security.tls.version.enable-deprecated", true);
 user_pref("security.tls.version.max", 4;
 user_pref("security.tls.version.min", 3);
