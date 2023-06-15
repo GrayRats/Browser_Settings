@@ -6,8 +6,10 @@ user_pref("accessibility.force_disabled", true); // Функция запрещ�
 //
 // ДатаБаза Index API Violentmonkey (аддон),Twitter, Google Drive,Mega. и др..
 user_pref("dom.indexedDB.enabled", true);
+user_pref("dom.indexedDB.preprocessing", true);
+//
 //user_pref("general.useragent.override", true); //Неправдоподобно выглядящий useragent ломает maps.yandex.ru и много что еще.
-user_pref("svg.disabled", false); //youtube.com (плеер).
+lockPref("svg.disabled", false); //youtube.com (плеер).
 //
 // 1.4 Что отобразит браузер после запуска
 // Значения: 0 -> пустая вкладка, 1 -> домашняя страница, 2 -> последняя посещенная страница 
@@ -30,15 +32,15 @@ user_pref("browser.fullscreen.animate", false);
 // 1.9.4 Отключает притормаживающую на окнах с многими вкладками анимацию открытия и закрытия табов.
 lockPref("browser.tabs.animate", false);
 // 1.9.6 Плавное открытие и сворачивание окошек главного меню и просмотра истории
-user_pref("xul.panel-animations.enabled", false);
+lockPref("xul.panel-animations.enabled", false);
 // 1.9.8 Задержка перед отрисовкой меню
 user_pref("ui.submenuDelay", 0);
 // 1.10 Не выводить предупреждение при открытии страницы about:config
 user_pref("browser.aboutConfig.showWarning", false);
 // 1.11 Настройки полноэкранного режима
 // 1.11.1 Отключить предупреждение о переходе в полноэкранный режим
-user_pref("full-screen-api.warning.timeout", 0);
-user_pref("full-screen-api.warning.delay", 0);
+lockPref("full-screen-api.warning.timeout", 0);
+lockPref("full-screen-api.warning.delay", 0);
 // 1.11.2 Задержка с переходом в полноэкранный режим
 user_pref("full-screen-api.transition-duration.enter", "0 0");
 user_pref("full-screen-api.transition-duration.leave", "0 0");
@@ -130,12 +132,12 @@ user_pref("extensions.abuseReport.enabled", false);
 user_pref("font.default.el", "sans-serif");
 user_pref("font.default.x-baltic", "sans-serif");
 user_pref("font.default.x-central-euro", "sans-serif");
-user_pref("font.default.x-cyrillic", "sans-serif");
+lockPref("font.default.x-cyrillic", "sans-serif");
 user_pref("font.default.x-unicode", "sans-serif");
 user_pref("font.default.x-user-def", "sans-serif");
-user_pref("font.default.x-western", "sans-serif");
+lockPref("font.default.x-western", "sans-serif");
 user_pref("font.internaluseonly.changed", true);
-user_pref("font.language.group", "x-cyrillic");
+lockPref("font.language.group", "x-cyrillic");
 //
 user_pref("font.minimum-size.x-cyrillic", 9);
 user_pref("font.minimum-size.x-western", 10);
@@ -159,10 +161,10 @@ user_pref("font.name.serif.x-user-def", "PT Serif Expert");
 user_pref("font.name.serif.x-western", "PT Serif Expert");
 //// 1.34 Настройки плавной прокрутки страниц
 user_pref("font.default.x-user-def", "sans-serif");
-user_pref("full-screen-api.transition-duration.enter", "0 0");
-user_pref("full-screen-api.transition-duration.leave", "0 0");
-user_pref("full-screen-api.warning.delay", 0);
-user_pref("full-screen-api.warning.timeout", 0);
+lockPref("full-screen-api.transition-duration.enter", "0 0");
+lockPref("full-screen-api.transition-duration.leave", "0 0");
+lockPref("full-screen-api.warning.delay", 0);
+lockPref("full-screen-api.warning.timeout", 0);
 //
 lockPref("browser.bookmarks.showRecentlyBookmarked", true);
 // Smoothfox OPTION 1: INSTANT SCROLLING (SIMPLE ADJUSTMENT)
@@ -287,7 +289,7 @@ user_pref("browser.urlbar.suggest.calculator", true);
 //user_pref("webgl.disabled", true);
 // 2.2.3 Дополнительная обработка изображений с использованием WebGL
 user_pref("webgl.angle.force-warp", true);
-user_pref("webgl.msaa-force", true);
+user_pref("webgl.msaa-force", false);
 // 2.2.4 Выполнение отрисовки некоторых отдельных элементов страницы через WebGL в отдельном потоке
 user_pref("gfx.offscreencanvas.enabled", false);
 // Firefox может автоматически определять сколько ядер или потоков имеет процессор в компьютере.
@@ -307,14 +309,21 @@ user_pref("layers.accelerate-all", true);
 user_pref( "layers.acceleration.disabled", false);
 //
 user_pref( "layers.offmainthreadcomposition.enabled", true);
+//
 user_pref( "gfx.webrender.all", true);
 user_pref( "gfx.webrender.enable", true);
+user_pref("gfx.webrender.precache-shaders", true);
 user_pref( "layers.omtp.enabled", true);
-//
+// PREF: GPU-accelerated Canvas2D 
+// [WARNING] May break PDF rendering on Surface Pro devices [2]
 user_pref( "gfx.canvas.azure.accelerated", true);
+user_pref("gfx.canvas.accelerated.cache-size", 4096);
+user_pref("gfx.content.skia-font-cache-size", 80);
+//
 user_pref( "gfx.webrender.compositor.force-enabled", true); //рекомендуется использовать композитор С ВидеоКартой
-// Принудительное декодирование видео видеокартой
-// user_pref("media.hardware-video-decoding.force-enabled", true);
+//
+// Принудительное декодирование видео видеокартой 
+user_pref("media.hardware-video-decoding.force-enabled", true); //enforce
 
 // 2.8 Аппаратное ускорение для Linux систем
 // 2.8.1 Включить Video Acceleration API (VA-API). Для окружений на базе Wayland
@@ -333,7 +342,10 @@ user_pref("dom.max_script_run_time_without_important_user_input", 30);
 // 3.4 "Ленивая" загрузка изображений
 // https://www.ghacks.net/2020/02/15/firefox-75-gets-lazy-loading-support-for-images/
 user_pref("dom.image-lazy-loading.enabled", true);
-
+// PREF: image tweaks
+user_pref("image.cache.size", 10485760);
+user_pref("image.mem.decode_bytes_at_a_time", 131072); // alt=65536; preferred=262144; chunk size for calls to the image decoders
+user_pref("image.mem.shared.unmap.min_expiration_ms", 120000); // default=60000; minimum timeout to unmap shared surfaces since they have been last used
 //ПАМЯТЬ
 // 4.7 Подгрузка страниц из кэша
 // Включать (true) имеет смысл только если используете дисковый кэш на SSD !СЕТИ
@@ -423,20 +435,20 @@ user_pref("network.trr.send_user-agent_headers", false);
 user_pref("network.dns.disablePrefetch", false);
 user_pref("network.dns.disablePrefetchFromHTTPS", false);
 //
-user_pref("dom.disable_window_open_feature.close", true);
+user_pref("dom.disable_window_open_feature.close", false);
 //
 // 7.27 Запрет скриптам скрывать адресную строку
 user_pref("dom.disable_window_open_feature.location", true);
 //
 // 7.28 Запрет скриптам передвигать и изменять размер окон браузера
-user_pref("dom.disable_window_move_resize", true);
+user_pref("dom.disable_window_move_resize", false);
 
 ////////////////////////////////////////////////////////////
 // 7. Безопасность //////////////////////////////////////////
 /////////////////////////////////////////////////////////////
 // Загрузка небезопасных фаилова.
 user_pref("privacy.cpd.downloads", false);
-user_pref("dom.block_download_insecure", false);
+lockPref("dom.block_download_insecure", false);
 user_pref("browser.safebrowsing.downloads.remote.url", "");
 user_pref("browser.safebrowsing.downloads.enabled", false);
 user_pref("security.remote_settings.intermediates.parallel_downloads", 8);
@@ -462,16 +474,15 @@ user_pref("security.insecure_connection_icon.enabled", true);
 user_pref("security.insecure_connection_text.enabled", true);
 user_pref("security.insecure_connection_text.pbmode.enabled", true);
 //
-user_pref("gfx.font_rendering.opentype_svg.enabled", true);
+lockPref("gfx.font_rendering.opentype_svg.enabled", true);
 user_pref("gfx.font_rendering.graphite.enabled", false);
 //
 // 7.1 Блокировка подключения к хостам использующим устаревшие и потенциально уязвимые протоколы шифрования SSL/TLS
 // https://wiki.mozilla.org/Security:Renegotiation#security.ssl.require_safe_negotiation
 user_pref("security.ssl.require_safe_negotiation", false);  Instagram, Mega.nz, многие другие.
 
-// 7.2 Запрет на использование устаревших и уязвимых TLS 1.0 и 1.1
-//
-user_pref("security.tls.version.enable-deprecated", true);
+// 7.2 Запрет на использование устаревших и уязвимых TLS 1.0 и 1.1 //
+lockPref("security.tls.version.enable-deprecated", true);
 user_pref("security.tls.version.max", 4;
 user_pref("security.tls.version.min", 3);
 user_pref("tcp.tcp_fastopen_enable", true);
@@ -655,7 +666,7 @@ user_pref("javascript.options.spectre.value_masking", true);
 //
 user_pref("breakpad.reportURL", "false");
 user_pref("browser.tabs.crashReporting.sendReport", false); // [FF44+]
-user_pref("dom.push.enabled", false);
+user_pref("dom.push.enabled", true);
 user_pref("app.normandy.enabled", false);
 lockPref("app.normandy.api_url", "blank");
 //
@@ -698,14 +709,15 @@ user_pref("browser.proton.places-tooltip.enabled", true);
 user_pref("browser.proton.urlbar.enabled", true);
 user_pref("browser.startup.blankWindow", false);
 user_pref("browser.startup.homepage.abouthome_cache.enabled", true);
-user_pref("browser.startup.preXulSkeletonUI", true);
+// PREF: disable preSkeletonUI on startup
+lockPref("browser.startup.preXulSkeletonUI", true);
 // удобный режим чтения страницы, при котором все, кроме текста удаляется.
 user_pref("reader.color_scheme", "sepia");
 user_pref("reader.content_width", 7);
 user_pref("reader.line_height", 2);
 user_pref("reader.font_size", 6);
 user_pref("reader.toolbar.vertical", true);
-user_pref("reader.errors.includeURLs", false);
+user_pref("reader.errors.includeURLs", true);
 //
 lockPref("browser.sessionhistory.max_total_viewers", 9);
 //
@@ -726,37 +738,6 @@ user_pref("network.warnOnAboutNetworking", false)
 user_pref("browser.bookmarks.showMobileBookmarks", true);
 // При переключении вкладок отображаются превью страниц
 user_pref("browser.ctrlTab.previews", true);
-///
-///////////ШРИФТ/FONTs
-user_pref("findbar.highlightAll", true);
-user_pref("font.internaluseonly.changed", true);
-user_pref("font.minimum-size.x-western", 10);
-user_pref("font.name.monospace.x-western", "Cascadia Mono");
-user_pref("font.name.sans-serif.x-cyrillic", "PT Astra Sans");
-user_pref("font.name.sans.x-cyrillic", "PT Astra Sans");
-user_pref("font.name.monospace.x-cyrillic", "Verdana");
-user_pref("font.default.el"                     , "sans-serif");
-user_pref("font.default.x-baltic"               , "sans-serif");
-user_pref("font.default.x-central-euro"         , "sans-serif");
-user_pref("font.default.x-cyrillic"             , "sans-serif");
-user_pref("font.default.x-unicode"              , "sans-serif");
-user_pref("font.default.x-user-def"             , "sans-serif");
-user_pref("font.default.x-western"              , "sans-serif");
-user_pref("font.name.monospace.el"              , "PT Mono");
-user_pref("font.name.monospace.x-baltic"        , "PT Mono");
-user_pref("font.name.monospace.x-central-euro"  , "PT Mono");
-user_pref("font.name.monospace.x-unicode"       , "PT Mono");
-user_pref("font.name.monospace.x-user-def"      , "PT Mono");
-user_pref("font.name.sans-serif.el"             , "Liberation Sans");
-user_pref("font.name.sans-serif.x-central-euro" , "PT Sans");
-user_pref("font.name.sans-serif.x-unicode"      , "DejaVu Sans");
-user_pref("font.name.sans-serif.x-user-def"     , "PT Sans");
-user_pref("font.name.sans-serif.x-western"      , "PT Sans");
-user_pref("font.name.serif.el"                  , "Liberation Serif");
-user_pref("font.name.serif.x-central-euro"      , "PT Serif");
-user_pref("font.name.serif.x-unicode"           , "DejaVu Serif");
-user_pref("font.name.serif.x-user-def"          , "PT Serif");
-user_pref("font.name.serif.x-western"           , "PT Serif");
 //
 //
 //
@@ -770,7 +751,7 @@ user_pref("gfx.canvas.azure.backends", "direct2d1.1,skia,cairo");
 //
 //
 user_pref("media.autoplay.enabled", false);
-lockPref("media.av1.enabled", true);
+lockPref("media.av1.enabled", true);  // AVI Видеопроигрывание
 // GTK
 user_pref("widget.chrome.allow-gtk-dark-theme", true);
 user_pref("widget.content.allow-gtk-dark-theme", true);
@@ -779,6 +760,7 @@ user_pref("browser.download.autohideButton", false);
 user_pref("browser.download.panel.shown", true);
 //
 user_pref("dom.ipc.processCount", "8"); /// Измените количество Процессов контента ВКЛАДОК 8
+//user_pref("dom.ipc.processCount.webIsolated", 4); // per-site; DEFAULT; Isolated Web Content
 /// изменить окно просмотра 
 user_pref("gfx.webrender.picture-tile-height", "254");
 user_pref("gfx.webrender.picture-tile-width", " 510");
@@ -831,10 +813,23 @@ user_pref("layout.word_select.stop_at_punctuation", true);
 user_pref("userChrome.padding.menu_compact", true);
 //
 // experimentis подстройки
+// PREF: Animated AVIF [NIGHTLY]
+// [1] https://codecalamity.com/animated-avif-is-finally-coming-to-firefox/
+lockPref("image.avif.sequence.enabled", true);
+lockPref("image.avif.enabled", "true");
+
+lockPref("image.jxl.enabled", true);
+//
 user_pref("dom.indexedDB.experimental", true);
 user_pref("media.mediasource.experimental.enabled", true);
+// NVIDIA SUper Resolution
+//user_pref("gfx.webrender.super-resolution.nvidia", true);
 //MEDIA/AUDIO
 user_pref("dom.media.autoplay.autoplay-policy-api", true);
 user_pref("media.wmf.low-latency.enabled", true);
 //
-user_pref("network.IDN_show_punycode", false); // показать punycode (из-за последней подделки URL-адреса conerns) 
+/// user_pref("network.IDN_show_punycode", false); // показать punycode (из-за последней подделки URL-адреса conerns) 
+// PREF: Prioritized Task Scheduling API [NIGHTLY]
+// [1] https://blog.mozilla.org/performance/2022/06/02/prioritized-task-scheduling-api-is-prototyped-in-nightly/
+// [2] https://medium.com/airbnb-engineering/building-a-faster-web-experience-with-the-posttask-scheduler-276b83454e91
+user_pref("dom.enable_web_task_scheduling", true);
