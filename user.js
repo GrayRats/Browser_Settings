@@ -165,12 +165,24 @@ user_pref("full-screen-api.warning.delay", 0);
 user_pref("full-screen-api.warning.timeout", 0);
 //
 lockPref("browser.bookmarks.showRecentlyBookmarked", true);
-//
-user_pref("gecko.handlerService.defaultHandlersVersion", 1);
-user_pref("general.smoothScroll.currentVelocityWeighting", "0.15");
-user_pref("general.smoothScroll.mouseWheel.durationMaxMS", 200);
-user_pref("general.smoothScroll.mouseWheel.durationMinMS", 80);
-user_pref("general.smoothScroll.stopDecelerationWeighting", "0.7");
+// Smoothfox OPTION 1: INSTANT SCROLLING (SIMPLE ADJUSTMENT)
+// recommended for 60hz+ displays
+// user_pref("general.smoothScroll",                       true); // DEFAULT
+// user_pref("mousewheel.default.delta_multiplier_y",      275);  // 250-400
+// recommended for 90hz+ displays
+user_pref("general.smoothScroll",                       true); // DEFAULT
+user_pref("mousewheel.default.delta_multiplier_y",      300); // 250-400
+user_pref("general.smoothScroll.msdPhysics.enabled",    true);
+// recommended for 120hz+ displays
+user_pref("general.smoothScroll.msdPhysics.continuousMotionMaxDeltaMS", 12);
+user_pref("general.smoothScroll.msdPhysics.motionBeginSpringConstant",  600);
+user_pref("general.smoothScroll.msdPhysics.regularSpringConstant",      650);
+user_pref("general.smoothScroll.msdPhysics.slowdownMinDeltaMS",         25);
+user_pref("general.smoothScroll.msdPhysics.slowdownMinDeltaRatio",      2.0);
+user_pref("general.smoothScroll.msdPhysics.slowdownSpringConstant",     250);
+user_pref("general.smoothScroll.currentVelocityWeighting",              1.0);
+user_pref("general.smoothScroll.stopDecelerationWeighting",             1.0);
+user_pref("mousewheel.default.delta_multiplier_y",                      300); // 250-400
 //
 user_pref("apz.overscroll.enabled", true);
 user_pref("apz.allow_double_tap_zooming", false);
@@ -179,7 +191,7 @@ user_pref("apz.one_touch_pinch.enabled", false);
 user_pref("ui.osk.enabled", false);
 user_pref("ui.osk.detect_physical_keyboard", false);
 user_pref("widget.non-native-theme.scrollbar.style", 1);
-//
+///
 // 1.35 Разрешить скриптам и сайтам изменять контекстное меню  вызываемое по правому клику мыши
 user_pref("dom.event.contextmenu.enabled", true);
 //
