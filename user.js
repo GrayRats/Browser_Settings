@@ -291,7 +291,7 @@ user_pref("browser.urlbar.suggest.calculator", true);
 user_pref("webgl.angle.force-warp", true);
 user_pref("webgl.msaa-force", false);
 // 2.2.4 Выполнение отрисовки некоторых отдельных элементов страницы через WebGL в отдельном потоке
-user_pref("gfx.offscreencanvas.enabled", false);
+user_pref("gfx.offscreencanvas.enabled", True);
 // Firefox может автоматически определять сколько ядер или потоков имеет процессор в компьютере.
 user_pref("dom.maxHardwareConcurrency", 12);
 // 2.6 Рендер PDF средствами видеокарты
