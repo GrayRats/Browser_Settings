@@ -463,7 +463,7 @@ user_pref("network.http.pipelining", true);
 user_pref("network.http.pipelining.ssl", true);
 user_pref("network.http.proxy.pipelining", true);
 user_pref("network.http.speculative-parallel-limit", 0);
-user_pref("network.predictor.enabled", false);
+user_pref("network.predictor.enabled", true);
 user_pref("network.prefetch-next", false);
 user_pref("network.proxy.socks_remote_dns", true);
 user_pref("network.security.esni.enabled", true);
