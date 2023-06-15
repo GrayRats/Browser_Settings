@@ -574,7 +574,7 @@ user_pref("privacy.usercontext.about_newtab_segregation.enabled", true);
 user_pref("pdfjs.enableScripting", true);
 lockPref("dom.battery.enabled", true);
 // Отключает запоминание уровня зума для сайта 
-user_pref("privacy.resistFingerprinting", true);
+user_pref("privacy.resistFingerprinting", false);
 user_pref("privacy.resistFingerprinting.autoDeclineNoUserInputCanvasPrompts", false);
 user_pref("privacy.spoof_english", 2);
 // 7.11 Запретить Flash плагину на https страницах обращаться к не зашифрованным ресурсам
