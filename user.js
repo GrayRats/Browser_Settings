@@ -2,7 +2,7 @@ lockPref("browser.preferences.experimental", true);
 lockPref("extensions.experiments.enabled", true);
 //
 user_pref("devtools.debugger.remote-enabled", false);
-user_pref("accessibility.force_disabled", true); // Функция запрещает службам поддержки доступности доступ к вашему браузеру. 
+/// user_pref("accessibility.force_disabled", true); // Функция запрещает службам поддержки доступности доступ к вашему браузеру. 
 //
 // ДатаБаза Index API Violentmonkey (аддон),Twitter, Google Drive,Mega. и др..
 user_pref("dom.indexedDB.enabled", true);
@@ -193,6 +193,7 @@ user_pref("apz.drag.touch.enabled", false);
 user_pref("apz.one_touch_pinch.enabled", false);
 user_pref("ui.osk.enabled", false);
 user_pref("ui.osk.detect_physical_keyboard", false);
+///
 user_pref("widget.non-native-theme.scrollbar.style", 1);
 ///
 // 1.35 Разрешить скриптам и сайтам изменять контекстное меню  вызываемое по правому клику мыши
@@ -289,8 +290,8 @@ user_pref("browser.urlbar.suggest.calculator", true);
 // 2.2.2 Полное отключение WebGL
 //user_pref("webgl.disabled", true);
 // 2.2.3 Дополнительная обработка изображений с использованием WebGL
-user_pref("webgl.angle.force-warp", true);
-user_pref("webgl.msaa-force", false);
+/// user_pref("webgl.angle.force-warp", true);
+/// user_pref("webgl.msaa-force", false);
 // 2.2.4 Выполнение отрисовки некоторых отдельных элементов страницы через WebGL в отдельном потоке
 user_pref("gfx.offscreencanvas.enabled", True);
 // Firefox может автоматически определять сколько ядер или потоков имеет процессор в компьютере.
@@ -328,7 +329,7 @@ user_pref("media.hardware-video-decoding.force-enabled", true); //enforce
 
 // 2.8 Аппаратное ускорение для Linux систем
 // 2.8.1 Включить Video Acceleration API (VA-API). Для окружений на базе Wayland
-user_pref("widget.wayland-dmabuf-vaapi.enabled", true);
+/// user_pref("widget.wayland-dmabuf-vaapi.enabled", true);
 // 2.8.2 Включить FFmpegDataDecoder. Для окружений на базе Wayland
 // user_pref("widget.wayland-dmabuf-webgl.enabled", true);
 user_pref("media.wmf.low-latency.enabled", true);
@@ -338,8 +339,8 @@ user_pref("content.notify.backoffcount", 5);
 //
 // user_pref ("security.data_uri.block_toplevel_data_uri_navigations", true);
 // 3.3 Время выполнения JS скриптов (10мс по умолчанию) для медленных сетей лучше увеличить
-/// user_pref("dom.max_script_run_time", 30);
-/// user_pref("dom.max_script_run_time_without_important_user_input", 30);
+user_pref("dom.max_script_run_time", 30);
+user_pref("dom.max_script_run_time_without_important_user_input", 30);
 // 3.4 "Ленивая" загрузка изображений
 // https://www.ghacks.net/2020/02/15/firefox-75-gets-lazy-loading-support-for-images/
 user_pref("dom.image-lazy-loading.enabled", true);
@@ -561,11 +562,11 @@ lockPref("services.sync.prefs.sync.privacy.trackingprotection.cryptomining.enabl
 /// lockPref("services.sync.prefs.sync.privacy.trackingprotection.enabled", false);
 /// lockPref("services.sync.prefs.sync.privacy.trackingprotection.fingerprinting.enabled", false);
 /////
-lockPref("privacy.trackingprotection.pbmode.enabled", true);
+/// lockPref("privacy.trackingprotection.pbmode.enabled", true);
 /// lockPref("privacy.query_stripping.enabled.pbmode", true);
 /// lockPref("privacy.query_stripping.enabled", true);
 /// lockPref("privacy.query_stripping.redirect", true);
-lockPref("services.sync.prefs.sync.privacy.trackingprotection.pbmode.enabled", true);
+/// lockPref("services.sync.prefs.sync.privacy.trackingprotection.pbmode.enabled", true);
 ////
 /// user_pref("privacy.userContext.ui.enabled", true);
 // включить частный контейнер для загрузки миниатюр [FF51 +]
@@ -578,7 +579,7 @@ user_pref("privacy.resistFingerprinting", false);
 user_pref("privacy.resistFingerprinting.autoDeclineNoUserInputCanvasPrompts", false);
 user_pref("privacy.spoof_english", 2);
 // 7.11 Запретить Flash плагину на https страницах обращаться к не зашифрованным ресурсам
-user_pref("security.mixed_content.block_object_subrequest", true);
+/// user_pref("security.mixed_content.block_object_subrequest", true);
 //
 user_pref("network.cookie.cookieBehavior", 4);
 //  0 = принимать все файлы Cookie по умолчанию.
@@ -600,27 +601,27 @@ user_pref("security.ssl3.ecdhe_rsa_aes_256_sha", true);
 user_pref("security.ssl3.rsa_aes_128_sha", true); // no PFS
 // Шифр ниже до сих пор активно используется в рунете, например, сайтом nnmclub
 // но для максимальной безопасности я рекомендую его отключить (установить значение false)
-user_pref("security.ssl3.rsa_aes_256_sha", true); // no PFS
+// user_pref("security.ssl3.rsa_aes_256_sha", true); // no PFS
 // без алгоритма ниже не будет работать популярный rutracker
 // тем не менее вы всегда сможете открыть сайт нажав кнопку "восстановить настройки по-умолчанию"
 // чтобы открыть сайт, а после перезагрузки user.js вернет блокировку слабого алгоритма
 // таким образом рекомендую данный алгоритм отключить, но оставлю его включенным для основной массы пользователей
-user_pref("security.ssl3.ecdhe_rsa_aes_128_gcm_sha256", true);
+// user_pref("security.ssl3.ecdhe_rsa_aes_128_gcm_sha256", true);
 // 7.12.3 Отключение алгоритма 3DES с размером ключа < 128
-user_pref("security.ssl3.dhe_dss_des_ede3_sha", true);
-user_pref("security.ssl3.dhe_rsa_des_ede3_sha", true);
-user_pref("security.ssl3.ecdh_ecdsa_des_ede3_sha", true);
-user_pref("security.ssl3.ecdh_rsa_des_ede3_sha", true);
-user_pref("security.ssl3.ecdhe_ecdsa_des_ede3_sha", true);
-user_pref("security.ssl3.ecdhe_rsa_des_ede3_sha", true);
-user_pref("security.ssl3.rsa_fips_des_ede3_sha", true);
+// user_pref("security.ssl3.dhe_dss_des_ede3_sha", true);
+// user_pref("security.ssl3.dhe_rsa_des_ede3_sha", true);
+// user_pref("security.ssl3.ecdh_ecdsa_des_ede3_sha", true);
+// user_pref("security.ssl3.ecdh_rsa_des_ede3_sha", true);
+// user_pref("security.ssl3.ecdhe_ecdsa_des_ede3_sha", true);
+// user_pref("security.ssl3.ecdhe_rsa_des_ede3_sha", true);
+// user_pref("security.ssl3.rsa_fips_des_ede3_sha", true);
 // 7.12.4 Отключение поддержки шифрования с пустым ключом
-user_pref("security.ssl3.rsa_null_sha", true);
-user_pref("security.ssl3.rsa_null_md5", true);
-user_pref("security.ssl3.ecdhe_rsa_null_sha", true);
-user_pref("security.ssl3.ecdhe_ecdsa_null_sha", true);
-user_pref("security.ssl3.ecdh_rsa_null_sha", true);
-user_pref("security.ssl3.ecdh_ecdsa_null_sha", true);
+// user_pref("security.ssl3.rsa_null_sha", true);
+// user_pref("security.ssl3.rsa_null_md5", true);
+// user_pref("security.ssl3.ecdhe_rsa_null_sha", true);
+// user_pref("security.ssl3.ecdhe_ecdsa_null_sha", true);
+// user_pref("security.ssl3.ecdh_rsa_null_sha", true);
+// user_pref("security.ssl3.ecdh_ecdsa_null_sha", true);
 // 1.62 Отключает текстовое сообщения о проигрываемом медиа во второй строке ниже названия вкладки
 //
 user_pref("browser.tabs.secondaryTextUnsupportedLocales", "ar,bn,bo,ckb,fa,gu,he,hi,ja,km,kn,ko,lo,mr,my,ne,pa,si,ta,te,th,ur,zh,ru")
@@ -657,12 +658,12 @@ user_pref("network.security.ports.banned", "4444,9050,9051,69,137,161,1719,1720,
 user_pref("privacy.window.name.update.enabled", true);
 user_pref("browser.urlbar.filter.javascript", true);
 // Отключение может незначительно повысить производительность браузера, но только на ваш страх и риск , можете отключить false эти функции.
-user_pref("javascript.options.spectre.index_masking", true);
-user_pref("javascript.options.spectre.jit_to_C++_calls", true);
-user_pref("javascript.options.spectre.object_mitigations.barriers", true);
-user_pref("javascript.options.spectre.object_mitigations.misc", true);
-user_pref("javascript.options.spectre.string_mitigations", true);
-user_pref("javascript.options.spectre.value_masking", true);
+user_pref("javascript.options.spectre.index_masking", false);
+user_pref("javascript.options.spectre.jit_to_C++_calls", false);
+user_pref("javascript.options.spectre.object_mitigations.barriers", false);
+user_pref("javascript.options.spectre.object_mitigations.misc", false);
+user_pref("javascript.options.spectre.string_mitigations", false);
+user_pref("javascript.options.spectre.value_masking", false);
 //
 user_pref("breakpad.reportURL", "false");
 user_pref("browser.tabs.crashReporting.sendReport", false); // [FF44+]
@@ -832,4 +833,4 @@ user_pref("media.wmf.low-latency.enabled", true);
 // PREF: Prioritized Task Scheduling API [NIGHTLY]
 // [1] https://blog.mozilla.org/performance/2022/06/02/prioritized-task-scheduling-api-is-prototyped-in-nightly/
 // [2] https://medium.com/airbnb-engineering/building-a-faster-web-experience-with-the-posttask-scheduler-276b83454e91
-user_pref("dom.enable_web_task_scheduling", true);
+/// user_pref("dom.enable_web_task_scheduling", true);
