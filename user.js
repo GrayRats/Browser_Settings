@@ -388,11 +388,11 @@ user_pref("network.trr.custom_uri", "https://dns.comss.one/dns-query");
 //user_pref("network.trr.custom_uri", "https://doh.pl.ahadns.net/dns-query");
 //
 //
-user_pref("network.cookie.same-site.enabled", true);
+///user_pref("network.cookie.same-site.enabled", true);
 user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
 user_pref("extensions.getAddons.showPane", false);
 // 5.3 Использовать DOH без исключений, в том числе при активном VPN и подключении через Proxy
-user_pref("network.dns.skipTRR-when-parental-control-enabled", false);
+///user_pref("network.dns.skipTRR-when-parental-control-enabled", false);
 user_pref("network.trr.enable_when_nrpt_detected", true);
 user_pref("network.trr.enable_when_proxy_detected", true);
 user_pref("network.trr.enable_when_vpn_detected", true);
@@ -403,7 +403,7 @@ user_pref("network.proxy.autoconfig_url", "https://antizapret.prostovpn.org/prox
 // 5.4 Отключить поддержку соединения с DNS через IPv6 
 //user_pref("network.dns.disableIPv6", true);
 // 5.4.1 Не ждать IPv6
-user_pref("network.trr.early-AAAA ", false);
+//user_pref("network.trr.early-AAAA ", false);
 // 5.4.2 Не использовать IPv6 если отсутствует его поддержка
 user_pref("network.trr.skip-AAAA-when-not-supported", true);
 // 5.4.3 Ждать ответа с записями для доступа к сайту и по IPv4 и по IPv6
@@ -427,7 +427,7 @@ user_pref("network.dns.use_https_rr_as_altsvc", true);
 user_pref("network.trr.blacklist-duration", 60);
 //
 // 5.9 Не отправить DNS серверу User Agent браузера
-user_pref("network.trr.send_user-agent_headers", false); 
+///user_pref("network.trr.send_user-agent_headers", false); 
 //
 // 5.10 Отключить предварительный опрос DNS сервера об имеющихся на странице ссылках
 // http://kb.mozillazine.org/Network.dns.disablePrefetch
@@ -437,7 +437,7 @@ user_pref("network.dns.disablePrefetch", false);
 user_pref("network.dns.disablePrefetchFromHTTPS", false);
 //
 user_pref("dom.disable_window_open_feature.close", false);
-//
+////////////////////////////////////////////////////////////
 // 7.27 Запрет скриптам скрывать адресную строку
 user_pref("dom.disable_window_open_feature.location", true);
 //
@@ -464,7 +464,7 @@ user_pref("browser.safebrowsing.downloads.remote.block_uncommon", false);
 // Возможные значения 0=Режим не проверяется, сертификат не импортируется
 // 1=Браузер видит данный режим, но сертификат не импортируется
 // 2=При обнаружении режима семейной безопасности импортируется сертификат, дающий Windows возможность управлять трафиком браузера
-user_pref("security.family_safety.mode", 0);
+//user_pref("security.family_safety.mode", 0);
 //
 // 7.8 Проверка сертификатов на надёжности подписавшего их удостоверяющего центра
 // https://wiki.mozilla.org/SecurityEngineering/Public_Key_Pinning
@@ -480,13 +480,13 @@ user_pref("gfx.font_rendering.graphite.enabled", false);
 //
 // 7.1 Блокировка подключения к хостам использующим устаревшие и потенциально уязвимые протоколы шифрования SSL/TLS
 // https://wiki.mozilla.org/Security:Renegotiation#security.ssl.require_safe_negotiation
-user_pref("security.ssl.require_safe_negotiation", false);  Instagram, Mega.nz, многие другие.
+// user_pref("security.ssl.require_safe_negotiation", false);  Instagram, Mega.nz, многие другие.
 
 // 7.2 Запрет на использование устаревших и уязвимых TLS 1.0 и 1.1 //
-lockPref("security.tls.version.enable-deprecated", true);
+// lockPref("security.tls.version.enable-deprecated", true);
 user_pref("security.tls.version.max", 4;
 user_pref("security.tls.version.min", 3);
-user_pref("tcp.tcp_fastopen_enable", true);
+user_pref("tcp.tcp_fastopen_enable", true); // Влияет на скороость
 user_pref("network.ftp.enabled", true);
 // 7.3 OCSP (Online Certificate Status Protocol) для подтверждения, что SSL сертификат сайта действителен и безопасен
 user_pref("security.ssl.enable_ocsp_stapling", true);
@@ -520,32 +520,31 @@ user_pref("security.pki.crlite_mode", 3);
 user_pref("privacy.trackingprotection.enabled", true);
 //
 // 7.10 Заблокировать выполнение скриптов, загружающихся по открытому соединению, на https страницах
-user_pref("security.mixed_content.block_active_content", true); 
+///user_pref("security.mixed_content.block_active_content", true); 
 user_pref("privacy.trackingprotection.fingerprinting.enabled", true);
 user_pref("privacy.trackingprotection.cryptomining.enable", true);
 user_pref("privacy.trackingprotection.socialtracking.enabled", true);
 // 
 user_pref("privacy.socialtracking.block_cookies.enabled", true);
 user_pref("privacy.donottrackheader.enabled", true);
-user_pref("toolkit.telemetry.enabled", false);
-user_pref("toolkit.telemetry.unified", false);
-user_pref("toolkit.telemetry.archive.enabled", false);
-user_pref("toolkit.telemetry.shutdownPingSender.enabled", false);
-user_pref("toolkit.telemetry.firstShutdownPing.enabled", false);
-user_pref("toolkit.telemetry.debugSlowSql ", false);
-user_pref("browser.ping-centre.telemetry", false);
+///user_pref("toolkit.telemetry.enabled", false);
+///user_pref("toolkit.telemetry.unified", false);
+///user_pref("toolkit.telemetry.archive.enabled", false);
+///user_pref("toolkit.telemetry.shutdownPingSender.enabled", false);
+///user_pref("toolkit.telemetry.firstShutdownPing.enabled", false);
+///user_pref("toolkit.telemetry.debugSlowSql ", false);
+///user_pref("browser.ping-centre.telemetry", false);
 user_pref("browser.send_pings", true);
-user_pref("browser.send_pings.require_same_host", false);
+///user_pref("browser.send_pings.require_same_host", false);
 user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
 // Позволяет сайту следить за действиями пользователя, когда он копирует выделенный текст.копирование текста из редактора).
-user_pref("dom.event.clipboardevents.enabled", false); // НеРекомендуется
+/// user_pref("dom.event.clipboardevents.enabled", false); // НеРекомендуется
 // dom performance Отключаем передачу браузером информации о времени начала и окончания загрузки страницы pornhub.com (авторизация). // True - передавать
 user_pref("dom.enable_performance", "true");
-lockPref("full-screen-api.warning.timeout", "false");
 /// Отключить трекинг trackingprotection
 lockPref("extensions.htmlaboutaddons.discover.enabled", "false");
-//lockPref("browser.trackingprotection.gethashURL", "");
-// lockPref("browser.trackingprotection.updateURL", "");
+/// lockPref("browser.trackingprotection.gethashURL", "");
+/// lockPref("browser.trackingprotection.updateURL", "");
 lockPref("browser.contentblocking.report.cookie.url", "");
 lockPref("browser.contentblocking.report.cryptominer.url", "");
 lockPref("browser.contentblocking.report.endpoint_url", "");
@@ -559,18 +558,18 @@ lockPref("browser.contentblocking.report.tracker.url", "");
 lockPref("browser.contentblocking.reportBreakage.url", "");
 ///
 lockPref("services.sync.prefs.sync.privacy.trackingprotection.cryptomining.enabled", true);
-lockPref("services.sync.prefs.sync.privacy.trackingprotection.enabled", false);
-lockPref("services.sync.prefs.sync.privacy.trackingprotection.fingerprinting.enabled", false);
+/// lockPref("services.sync.prefs.sync.privacy.trackingprotection.enabled", false);
+/// lockPref("services.sync.prefs.sync.privacy.trackingprotection.fingerprinting.enabled", false);
 /////
 lockPref("privacy.trackingprotection.pbmode.enabled", true);
-lockPref("privacy.query_stripping.enabled.pbmode", true);
-lockPref("privacy.query_stripping.enabled", true);
-lockPref("privacy.query_stripping.redirect", true);
+/// lockPref("privacy.query_stripping.enabled.pbmode", true);
+/// lockPref("privacy.query_stripping.enabled", true);
+/// lockPref("privacy.query_stripping.redirect", true);
 lockPref("services.sync.prefs.sync.privacy.trackingprotection.pbmode.enabled", true);
 ////
-user_pref("privacy.userContext.ui.enabled", true);
+/// user_pref("privacy.userContext.ui.enabled", true);
 // включить частный контейнер для загрузки миниатюр [FF51 +]
-user_pref("privacy.usercontext.about_newtab_segregation.enabled", true);
+/// user_pref("privacy.usercontext.about_newtab_segregation.enabled", true);
 ////
 user_pref("pdfjs.enableScripting", true);
 lockPref("dom.battery.enabled", true);
