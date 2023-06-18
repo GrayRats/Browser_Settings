@@ -210,7 +210,7 @@ user_pref("browser.messaging-system.whatsNewPanel.enabled", false);
 // 1.39 Частота проверки страницы на изменения для перезагрузки кэша и обновления
 // Возможные значения 0=один раз за сессию 1=каждый раз при просмотре страницы
 // 2=не проверять, использовать кэш браузера 3=проверять, когда страница устарела (определяется автоматически)
-user_pref("browser.cache.check_doc_frequency", 1);
+user_pref("browser.cache.check_doc_frequency", 3);
 //
 // 1.41 Не выгружать вкладки (не усыплять) даже если не хватает свободной памяти
 user_pref("browser.tabs.unloadOnLowMemory", false);
