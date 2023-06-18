@@ -23,14 +23,14 @@ user_pref("browser.tabs.warnOnClose", false);
 // 1.8 Предупреждать при закрытии всех вкладок кроме активной
 user_pref("browser.tabs.warnOnCloseOtherTabs", true);
 // 1.9 Настройки анимации
-user_pref("toolkit.cosmeticAnimations.enabled", true);  //Отключение  части анимац интерфейса
-user_pref("ui.prefersReducedMotion", 0);  // Поставить на 1 отключить всю анимацию CSS
+user_pref("toolkit.cosmeticAnimations.enabled", false);  //Отключение  части анимац интерфейса
+// user_pref("ui.prefersReducedMotion", 0);  // Поставить на 1 отключить всю анимацию CSS
 // 1.9.2 Анимация открытия окна браузера. Отключение false
 user_pref("browser.stopReloadAnimation.enabled", false);
 // 1.9.3 Анимация плавного движения верхней рамки за видимую часть экрана при переходе в полноэкранный режим.
 user_pref("browser.fullscreen.animate", false);
 // 1.9.4 Отключает притормаживающую на окнах с многими вкладками анимацию открытия и закрытия табов.
-lockPref("browser.tabs.animate", false);
+lockPref("browser.tabs.animate", true);
 // 1.9.6 Плавное открытие и сворачивание окошек главного меню и просмотра истории
 lockPref("xul.panel-animations.enabled", false);
 // 1.9.8 Задержка перед отрисовкой меню
@@ -72,6 +72,7 @@ user_pref("browser.search.suggest.enabled", true);
 user_pref("layout.spellcheckDefault", 2);
 // 1.18 При выделении слова не захватывать следующий пробел
 user_pref("layout.word_select.eat_space_to_next_word", false);
+//
 user_pref("dom.disable_beforeunload", false);
 user_pref("browser.urlbar.openintab", true);
 user_pref("browser.urlbar.quicksuggest.sponsoredIndex", 0);
@@ -107,7 +108,7 @@ user_pref("browser.newtabpage.enabled", true);
 
 // 1.28 Отключить модуль LaterRun, 
 // предназначенный для показа новым пользователям различной справочной информации при n-ом запуске браузера
-user_pref("browser.laterrun.enabled", false);
+// user_pref("browser.laterrun.enabled", false);
 
 // 1.29 Отключает замеры времени запуска браузера и предложение сбросить профиль для его ускорения.
 user_pref("browser.slowStartup.notificationDisabled", true);
@@ -225,7 +226,7 @@ user_pref("findbar.modalHighlight", true);
 // 1.42.4 Отключить звукоковой сигнал, если ничего не найдено
 user_pref("accessibility.typeaheadfind.enablesound", false);
 // 1.42.5 Поиск текста на странице по мере его набора
-user_pref("accessibility.typeaheadfind", true);
+user_pref("accessibility.typeaheadfind", false);
 
 // 1.44 Отключить показ меню при нажатии кнопки Alt
 // Вызывает ложные переключения для людей у которых переключения языка настроено на 
@@ -343,7 +344,7 @@ user_pref("dom.max_script_run_time_without_important_user_input", 30);
 // https://www.ghacks.net/2020/02/15/firefox-75-gets-lazy-loading-support-for-images/
 user_pref("dom.image-lazy-loading.enabled", true);
 // PREF: image tweaks
-user_pref("image.cache.size", 10485760);
+//user_pref("image.cache.size", 10485760);
 user_pref("image.mem.decode_bytes_at_a_time", 131072); // alt=65536; preferred=262144; chunk size for calls to the image decoders
 user_pref("image.mem.shared.unmap.min_expiration_ms", 120000); // default=60000; minimum timeout to unmap shared surfaces since they have been last used
 //ПАМЯТЬ
@@ -376,7 +377,7 @@ user_pref("network.trr.mode", 3);
 
 // По-умолчанию настроен Comss.one DNS - https://www.comss.ru/page.php?id=7315
 user_pref("network.trr.uri", "https://dns.comss.one/dns-query");
-user_pref("network.trr.custom_uri", "https://dns.east.comss.one/dns-query");
+user_pref("network.trr.custom_uri", "https://dns.comss.one/dns-query");
 
 // Вариативно - https://controld.com/ от Winscribe (сервера по всему миру, фильтрация вирусов, рекламы и трекинга)
 //user_pref("network.trr.uri", "https://freedns.controld.com/p2");
