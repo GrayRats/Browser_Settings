@@ -332,14 +332,14 @@ user_pref("widget.wayland-dmabuf-vaapi.enabled", true);
 // 2.8.2 Включить FFmpegDataDecoder. Для окружений на базе Wayland
 // user_pref("widget.wayland-dmabuf-webgl.enabled", true);
 user_pref("media.wmf.low-latency.enabled", true);
-user_pref("nglayout.initialpaint.delay", 10);
+// user_pref("nglayout.initialpaint.delay", 10);
 // после которых браузер будет ожидать полную загрузку
 user_pref("content.notify.backoffcount", 5);
 //
-user_pref ("security.data_uri.block_toplevel_data_uri_navigations", true);
+// user_pref ("security.data_uri.block_toplevel_data_uri_navigations", true);
 // 3.3 Время выполнения JS скриптов (10мс по умолчанию) для медленных сетей лучше увеличить
-user_pref("dom.max_script_run_time", 30);
-user_pref("dom.max_script_run_time_without_important_user_input", 30);
+/// user_pref("dom.max_script_run_time", 30);
+/// user_pref("dom.max_script_run_time_without_important_user_input", 30);
 // 3.4 "Ленивая" загрузка изображений
 // https://www.ghacks.net/2020/02/15/firefox-75-gets-lazy-loading-support-for-images/
 user_pref("dom.image-lazy-loading.enabled", true);
