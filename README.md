@@ -56,9 +56,8 @@ maybe, enable AdGuard URL Tracking. <br>
 можно через ветку реестра: `HKEY_CURRENT_USER\Software\Mozilla\Firefox\Extensions` <br>
 Extensions (in no particular order...)
 ___
-Extensions (maybe)
-*
-CanvasBlocker ✔ Privacy |[GitHub](https://github.com/kkapsner/CanvasBlocker) <br>| <br>
+Extensions (maybe)*
+CanvasBlocker ✔ Privacy |[GitHub](https://github.com/kkapsner/CanvasBlocker)<br>
 Canvas API:  great fallback if you allow an RFP canvas site exception <br>
 Screen API and Navigator API: don't use with RFP <br>
 The rest: good protection against naive scripts, detectable with advanced scripts <br> 
