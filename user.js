@@ -389,7 +389,7 @@ user_pref("network.trr.custom_uri", "https://dns.comss.one/dns-query");
 //user_pref("network.trr.custom_uri", "https://doh.pl.ahadns.net/dns-query");
 //
 //
-///user_pref("network.cookie.same-site.enabled", true);
+user_pref("network.cookie.same-site.enabled", false);
 user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
 user_pref("extensions.getAddons.showPane", false);
 // 5.3 Использовать DOH без исключений, в том числе при активном VPN и подключении через Proxy
@@ -559,13 +559,13 @@ lockPref("browser.contentblocking.report.tracker.url", "");
 lockPref("browser.contentblocking.reportBreakage.url", "");
 ///
 lockPref("services.sync.prefs.sync.privacy.trackingprotection.cryptomining.enabled", true);
-/// lockPref("services.sync.prefs.sync.privacy.trackingprotection.enabled", false);
-/// lockPref("services.sync.prefs.sync.privacy.trackingprotection.fingerprinting.enabled", false);
+lockPref("services.sync.prefs.sync.privacy.trackingprotection.enabled", false);
+lockPref("services.sync.prefs.sync.privacy.trackingprotection.fingerprinting.enabled", false);
 /////
-/// lockPref("privacy.trackingprotection.pbmode.enabled", true);
-/// lockPref("privacy.query_stripping.enabled.pbmode", true);
-/// lockPref("privacy.query_stripping.enabled", true);
-/// lockPref("privacy.query_stripping.redirect", true);
+lockPref("privacy.trackingprotection.pbmode.enabled", true);
+lockPref("privacy.query_stripping.enabled.pbmode", true);
+lockPref("privacy.query_stripping.enabled", true);
+lockPref("privacy.query_stripping.redirect", true);
 /// lockPref("services.sync.prefs.sync.privacy.trackingprotection.pbmode.enabled", true);
 ////
 /// user_pref("privacy.userContext.ui.enabled", true);
@@ -608,20 +608,20 @@ user_pref("security.ssl3.rsa_aes_128_sha", true); // no PFS
 // таким образом рекомендую данный алгоритм отключить, но оставлю его включенным для основной массы пользователей
 // user_pref("security.ssl3.ecdhe_rsa_aes_128_gcm_sha256", true);
 // 7.12.3 Отключение алгоритма 3DES с размером ключа < 128
-// user_pref("security.ssl3.dhe_dss_des_ede3_sha", true);
-// user_pref("security.ssl3.dhe_rsa_des_ede3_sha", true);
-// user_pref("security.ssl3.ecdh_ecdsa_des_ede3_sha", true);
-// user_pref("security.ssl3.ecdh_rsa_des_ede3_sha", true);
-// user_pref("security.ssl3.ecdhe_ecdsa_des_ede3_sha", true);
-// user_pref("security.ssl3.ecdhe_rsa_des_ede3_sha", true);
-// user_pref("security.ssl3.rsa_fips_des_ede3_sha", true);
+user_pref("security.ssl3.dhe_dss_des_ede3_sha", true);
+user_pref("security.ssl3.dhe_rsa_des_ede3_sha", true);
+user_pref("security.ssl3.ecdh_ecdsa_des_ede3_sha", true);
+user_pref("security.ssl3.ecdh_rsa_des_ede3_sha", true);
+user_pref("security.ssl3.ecdhe_ecdsa_des_ede3_sha", true);
+user_pref("security.ssl3.ecdhe_rsa_des_ede3_sha", true);
+user_pref("security.ssl3.rsa_fips_des_ede3_sha", true);
 // 7.12.4 Отключение поддержки шифрования с пустым ключом
-// user_pref("security.ssl3.rsa_null_sha", true);
-// user_pref("security.ssl3.rsa_null_md5", true);
-// user_pref("security.ssl3.ecdhe_rsa_null_sha", true);
-// user_pref("security.ssl3.ecdhe_ecdsa_null_sha", true);
-// user_pref("security.ssl3.ecdh_rsa_null_sha", true);
-// user_pref("security.ssl3.ecdh_ecdsa_null_sha", true);
+user_pref("security.ssl3.rsa_null_sha", true);
+user_pref("security.ssl3.rsa_null_md5", true);
+user_pref("security.ssl3.ecdhe_rsa_null_sha", true);
+user_pref("security.ssl3.ecdhe_ecdsa_null_sha", true);
+user_pref("security.ssl3.ecdh_rsa_null_sha", true);
+user_pref("security.ssl3.ecdh_ecdsa_null_sha", true);
 // 1.62 Отключает текстовое сообщения о проигрываемом медиа во второй строке ниже названия вкладки
 //
 user_pref("browser.tabs.secondaryTextUnsupportedLocales", "ar,bn,bo,ckb,fa,gu,he,hi,ja,km,kn,ko,lo,mr,my,ne,pa,si,ta,te,th,ur,zh,ru")
@@ -671,7 +671,8 @@ user_pref("dom.push.enabled", true);
 user_pref("app.normandy.enabled", false);
 lockPref("app.normandy.api_url", "blank");
 //
-user_pref("browser.safebrowsing.enabled", false);
+// user_pref("browser.safebrowsing.enabled", false);
+//
 user_pref("browser.safebrowsing.downloads.enabled", false);
 user_pref("browser.safebrowsing.provider.google4.dataSharing.enabled", blank);
 user_pref("browser.safebrowsing.provider.google4.updateURL", blank);
@@ -792,8 +793,8 @@ user_pref("browser.privatebrowsing.forceMediaMemoryCache", false);
 // отключить общую память (защита от Spectre)
 user_pref ("javascript.options.shared_memory", true);
 // Отключаем WebRTC ?
-user_pref("privacy.webrtc.globalMuteToggles", true);  // WebRTC Global Mute Toggles
-//user_pref("media.peerconnection.enabled", false);
+user_pref("privacy.webrtc.globalMuteToggles", false);  // WebRTC Global Mute Toggles
+user_pref("media.peerconnection.enabled", true);
 //ser_pref("media.peerconnection.ice.default_address_only", true);
 //user_pref("media.peerconnection.ice.no_host", true);
 //user_pref("media.peerconnection.ice.relay_only", true);
@@ -806,7 +807,7 @@ user_pref("privacy.webrtc.globalMuteToggles", true);  // WebRTC Global Mute Togg
 // Включает механизм отправки нескольких HTTP запросов не дожидаясь ответов. Немного ускоряет.
 user_pref("network.http.pipelining", true);
 user_pref("network.http.pipelining.ssl", true);
-user_pref("network.http.proxy.pipelining", true);
+// user_pref("network.http.proxy.pipelining", true);
 //
 user_pref("layout.css.osx-font-smoothing.enabled", true);
 user_pref("layout.word_select.stop_at_punctuation", true);
@@ -833,4 +834,4 @@ user_pref("media.wmf.low-latency.enabled", true);
 // PREF: Prioritized Task Scheduling API [NIGHTLY]
 // [1] https://blog.mozilla.org/performance/2022/06/02/prioritized-task-scheduling-api-is-prototyped-in-nightly/
 // [2] https://medium.com/airbnb-engineering/building-a-faster-web-experience-with-the-posttask-scheduler-276b83454e91
-/// user_pref("dom.enable_web_task_scheduling", true);
+user_pref("dom.enable_web_task_scheduling", true);
